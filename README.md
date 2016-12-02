@@ -3,9 +3,9 @@ Ease to use, lightweight and responsive jQuery Slider. Customizable by CSS class
 
 ##Quick start
 
-Rule: If you plan to use a few sliders at the page, use the unique ID for each slider.
+**Rule:** If you plan to use a few sliders at the page, use the unique ID for each slider.
 
-HTML in <head>:
+**HTML in** <head>:
 ```html
     <head>
         <!-- jQuery -->
@@ -29,7 +29,9 @@ HTML in <head>:
         </script>
     </head>
 ```
-HTML in <body>:
+
+**HTML in** <body>:
+
 ```html
     <body>
         <div id="sample" class="ma5slider outside-navs outside-dots anim-horizontal loop-mode">
