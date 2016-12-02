@@ -3,7 +3,7 @@ Ease to use, lightweight and responsive jQuery Slider. Customizable by CSS class
 
 ##Quick start
 
-**Rule:** If you plan to use a few sliders at the page, use the **unique ID** for each slider.
+**Rule:** use the **unique ID** for each slider.
 
 **HTML in** <head>:
 ```html
