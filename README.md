@@ -6,7 +6,7 @@ Ease to use, lightweight and responsive jQuery Slider. Customizable by CSS class
 Rule: If you plan to use a few sliders at the page, use the unique ID for each slider.
 
 HTML in <head>:
-```
+```html
     <head>
         <!-- jQuery -->
         <script src="http://ma5slider.ma5.pl/js/jquery.min.js"></script>
@@ -30,7 +30,7 @@ HTML in <head>:
     </head>
 ```
 HTML in <body>:
-```
+```html
     <body>
         <div id="sample" class="ma5slider outside-navs outside-dots anim-horizontal loop-mode">
             <div class="slides">
@@ -51,7 +51,7 @@ HTML in <body>:
 
 You can use a **CSS classes** next to **ma5slider** to the final appearance.
 
-```
+```html
     <div id="example..." class="ma5slider anim-horizontal top-dots outside-navs ...">
 ```
 
