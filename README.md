@@ -34,7 +34,7 @@ Ease to use, lightweight and responsive jQuery Slider. Customizable by CSS class
 
 ```html
     <body>
-        <div id="sample" class="ma5slider outside-navs outside-dots anim-horizontal loop-mode">
+        <div id="example-1" class="ma5slider outside-navs outside-dots anim-horizontal loop-mode">
             <div class="slides">
                 <!-- children = slides -->
                 <a href="#slide-1"><img src="http://ma5slider.ma5.pl/images/DSC_0916.jpg" alt=""></a>
