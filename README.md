@@ -1,5 +1,5 @@
 # ma5slider
-Ease to use, lightweight and responsive jQuery Slider. Customizable by CSS classes. Custom animations for each slide. **[Demo]**(http://ma5slider.ma5.pl)
+Ease to use, lightweight and responsive jQuery Slider. Customizable by CSS classes. Custom animations for each slide. [**Demo**](http://ma5slider.ma5.pl)
 
 ##Quick start
 
