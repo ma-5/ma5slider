@@ -5,7 +5,8 @@ Ease to use, lightweight and responsive jQuery Slider. Customizable by CSS class
 
 **Rule:** use the **unique ID** for each slider.
 
-**HTML in** <head>:
+**HTML in HEAD**:
+
 ```html
     <head>
         <!-- jQuery -->
@@ -30,7 +31,7 @@ Ease to use, lightweight and responsive jQuery Slider. Customizable by CSS class
     </head>
 ```
 
-**HTML in** <body>:
+**HTML in BODY**:
 
 ```html
     <body>
