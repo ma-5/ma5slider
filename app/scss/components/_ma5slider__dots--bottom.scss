@@ -1,0 +1,32 @@
+.horizontal-dots {
+    &.outside-dots {
+        &.bottom-dots {
+            .dots {
+                // responsive
+                @media(max-width: 359px) {
+                    margin: 7px 0 0 0;
+                }
+                @media(min-width: 360px) and (max-width: 767.9px) {
+                    margin: 7px 0 0 0;
+                }
+                @media(min-width: 768px) and (max-width: 991.9px) {
+                    margin: 8px 0 0 0;
+                }
+                @media(min-width: 992px) and (max-width: 1199.9px) {
+                    margin: 5px 0 0 0;
+                }
+                @media(min-width: 1200px) {
+                    margin: 10px 0 0 0;
+                }
+            }
+        }
+    }
+}
+
+.vertical-dots {
+    &.bottom-dots {
+        .dots {
+            justify-content: flex-end;
+        }
+    }
+}

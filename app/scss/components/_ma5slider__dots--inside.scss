@@ -1,0 +1,95 @@
+.inside-dots {
+    .dots {
+        > .dot {
+            background-color: $dots-inside-color;
+
+            &:hover {
+                background-color: $dots-inside-color-hover;
+            }
+            &.active {
+                background-color: $dots-inside-color-active;
+            }
+        }
+    }
+}
+
+.horizontal-dots {
+    &.inside-dots {
+        .dots {
+            // responsive
+            @media(max-width: 359px) {
+                padding-left: 8px;
+                padding-right: 8px;
+                bottom: 20px;
+            }
+
+            @media(min-width: 360px) and (max-width: 767.9px) {
+                padding-left: 10px;
+                padding-right: 10px;
+                bottom: 22px;
+            }
+            @media(min-width: 768px) and (max-width: 991.9px) {
+                padding-left: 15px;
+                padding-right: 15px;
+                bottom: 32px;
+            }
+            @media(min-width: 992px) and (max-width: 1199.9px) {
+                padding-left: 20px;
+                padding-right: 20px;
+                bottom: 38px;
+            }
+            @media(min-width: 1200px) {
+                padding-left: 25px;
+                padding-right: 25px;
+                bottom: 40px;
+            }
+        }
+    }
+}
+
+// dots inside
+.horizontal-dots {
+    &.inside-dots {
+        .dots {
+            position: absolute;
+            width: 100%;
+            height: 0;
+            z-index: 3;
+        }
+    }
+}
+
+
+// dots horizontal
+.horizontal-dots {
+    .dots {
+        display: block;
+    }
+    &.outside-navs {
+        &.inside-dots {
+            .dots {
+                // responsive
+                @media(max-width: 359px) {
+                    padding-left: 26px;
+                    padding-right: 26px;
+                }
+                @media(min-width: 360px) and (max-width: 767.9px) {
+                    padding-left: 28px;
+                    padding-right: 28px;
+                }
+                @media(min-width: 768px) and (max-width: 991.9px) {
+                    padding-left: 45px;
+                    padding-right: 45px;
+                }
+                @media(min-width: 992px) and (max-width: 1199.9px) {
+                    padding-left: 55px;
+                    padding-right: 55px;
+                }
+                @media(min-width: 1200px) {
+                    padding-left: 65px;
+                    padding-right: 65px;
+                }
+            }
+        }
+    }
+}

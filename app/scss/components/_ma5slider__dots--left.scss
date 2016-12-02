@@ -1,0 +1,108 @@
+.dots {
+    .left-dots & {
+        text-align: left;
+
+        > .dot {
+            &:first-of-type {
+                margin-left: 0;
+            }
+        }
+    }
+}
+
+// dots vertical
+.vertical-dots {
+    &.inside-dots {
+        &.vertical-navs {
+            &.left-dots {
+                .dots {
+                    left: 0;
+
+                    // responsive
+                    @media(max-width: 359px) {
+                        padding-left: 7px;
+                    }
+                    @media(min-width: 360px) and (max-width: 767.9px) {
+                        padding-left: 7px;
+                    }
+                    @media(min-width: 768px) and (max-width: 991.9px) {
+                        padding-left: 12px;
+                    }
+                    @media(min-width: 992px) and (max-width: 1199.9px) {
+                        padding-left: 12px;
+                    }
+                    @media(min-width: 1200px) {
+                        padding-left: 12px;
+                    }
+                }
+            }
+        }
+        &.horizontal-navs {
+            &.left-dots {
+                .dots {
+
+                    // responsive
+                    @media(max-width: 359px) {
+                        left: 27px;
+                        padding-left: 7px;
+                    }
+                    @media(min-width: 360px) and (max-width: 767.9px) {
+                        left: 28px;
+                        padding-left: 7px;
+                    }
+                    @media(min-width: 768px) and (max-width: 991.9px) {
+                        left: 30px;
+                    }
+                    @media(min-width: 992px) and (max-width: 1199.9px) {
+                        left: 32px;
+                    }
+                    @media(min-width: 1200px) {
+                        left: 38px;
+                    }
+                }
+            }
+        }
+    }
+    &.outside-dots {
+        &.left-dots {
+            .dots {
+                padding-left: 0;
+
+                // responsive
+                @media(max-width: 359px) {
+                    padding-right: 7px;
+                }
+                @media(min-width: 360px) and (max-width: 767.9px) {
+                    padding-right: 7px;
+                }
+                @media(min-width: 768px) and (max-width: 991.9px) {
+                    padding-right: 10px;
+                }
+                @media(min-width: 992px) and (max-width: 1199.9px) {
+                    padding-right: 10px;
+                }
+                @media(min-width: 1200px) {
+                    padding-right: 12px;
+                }
+            }
+            .navs-wrapper {
+                // responsive
+                @media(max-width: 359px) {
+                    padding-left: 15px;
+                }
+                @media(min-width: 360px) and (max-width: 767.9px) {
+                    padding-left: 16px;
+                }
+                @media(min-width: 768px) and (max-width: 991.9px) {
+                    padding-left: 20px;
+                }
+                @media(min-width: 992px) and (max-width: 1199.9px) {
+                    padding-left: 22px;
+                }
+                @media(min-width: 1200px) {
+                    padding-left: 26px;
+                }
+            }
+        }
+    }
+}

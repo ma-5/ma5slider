@@ -1,0 +1,35 @@
+/*!
+ *   MA5-Slider
+ *   v 1.0.0
+ *   Copyright (c) 2016 Tomasz Kalinowski
+ *   http://slider.ma5.pl
+ *   GitHub: https://github.com/ma-5/ma5slider
+ */
+
+// core
+@import "components/ma5slider";
+
+// features
+@import "components/ma5slider__nojs";
+
+// navs
+@import "components/ma5slider__navs";
+@import "components/ma5slider__navs--horizontal";
+@import "components/ma5slider__navs--overwrite-direction";
+
+// dots
+@import "components/ma5slider__dots";
+@import "components/ma5slider__dots--inside";
+@import "components/ma5slider__dots--outside";
+@import "components/ma5slider__dots--right";
+@import "components/ma5slider__dots--center";
+@import "components/ma5slider__dots--left";
+
+@import "components/ma5slider__dots--top";
+@import "components/ma5slider__dots--bottom";
+@import "components/ma5slider__dots--vertical";
+
+// sets
+@import "components/ma5slider__anim--horizontal";
+@import "components/ma5slider__anim--vertical";
+@import "components/ma5slider__anim--fade";

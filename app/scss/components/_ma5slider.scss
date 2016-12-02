@@ -1,0 +1,146 @@
+.ma5slider {
+    position: relative;
+    user-select: none;
+
+    // responsive
+    @media(max-width: 359px) {
+        margin-bottom: 15px;
+    }
+    @media(min-width: 360px) and (max-width: 767.9px) {
+        margin-bottom: 15px;
+    }
+    @media(min-width: 768px) and (max-width: 991.9px) {
+        margin-bottom: 30px;
+    }
+    @media(min-width: 992px) and (max-width: 1199.9px) {
+        margin-bottom: 40px;
+    }
+    @media(min-width: 1200px) {
+        margin-bottom: 50px;
+    }
+
+    .slides {
+        position: relative;
+    }
+    td & {
+        margin-bottom: 0;
+    }
+
+    .slide {
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        text-align: center;
+        font-size: 50px;
+        display: none;
+        z-index: 0;
+        transform:translate(0,0);
+        outline: none;
+
+        img {
+            display: block;
+            outline: none;
+            width: 100%;
+            height: auto;
+        }
+    }
+    > img {
+        &.slide {
+            display: block;
+            outline: none;
+            width: 100%;
+            height: auto;
+        }
+    }
+    .navs-wrapper {
+        position: relative;
+        overflow: hidden;
+    }
+    .canvas {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }
+    .slide--prev {
+        display: block;
+        z-index: 1;
+    }
+    .slide--active {
+        display: block;
+        z-index: 2;
+    }
+    .slide--next {
+        display: block;
+        z-index: 0;
+    }
+    &.hidden-navs {
+        .nav--next,
+        .nav--prev {
+            display: none;
+        }
+    }
+    &.hidden-dots {
+        .dots {
+            display: none;
+        }
+    }
+    &.hover-navs {
+        .nav--next,
+        .nav--prev {
+            opacity: 0;
+            transition: opacity 0.5s ease-out 0.3s;
+        }
+        &:hover {
+            .nav--next,
+            .nav--prev {
+                opacity: 1 !important;
+                transition: opacity 0.15s ease-in 0s;
+            }
+        }
+        &.first-slide {
+            &:hover {
+                .nav--prev {
+                    opacity: 0.25 !important;
+                }
+            }
+        }
+        &.last-slide {
+            &:hover {
+                .nav--next {
+                    opacity: 0.25 !important;
+                }
+            }
+        }
+    }
+    &.hover-dots {
+        .dots {
+            opacity: 0;
+            transition: opacity 0.5s ease-out 0.3s;
+        }
+        &:hover {
+            .dots {
+                opacity: 1 !important;
+                transition: opacity 0.15s ease-in 0s;
+            }
+        }
+    }
+}
+
+.ma5slider__control {
+    &.targeted {
+        opacity: 0.25;
+        pointer-events: none;
+    }
+}
+.slide-area {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+}
+
+
+
+
+

@@ -1,0 +1,247 @@
+// no js
+.ma5slider {
+    > .slides {
+        > * {
+            display: none;
+
+            &:first-child {
+                display: block;
+                position: relative;
+                top: 0;
+                left: 0;
+                text-align: center;
+                font-size: 50px;
+                z-index: 0;
+                transform: translate(0, 0);
+                outline: none;
+
+                img {
+                    display: block;
+                    outline: none;
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+    }
+
+    // outside navs, outside vertical dots
+    &.outside-navs {
+        &.outside-dots {
+            > .slides {
+                // responsive
+                @media(max-width: 359px) {
+                    padding-left: 18px;
+                    padding-right: 18px;
+                }
+                @media(min-width: 360px) and (max-width: 767.9px) {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+                @media(min-width: 768px) and (max-width: 991.9px) {
+                    padding-left: 30px;
+                    padding-right: 30px;
+                }
+                @media(min-width: 992px) and (max-width: 1199.9px) {
+                    padding-left: 35px;
+                    padding-right: 35px;
+                }
+                @media(min-width: 1200px) {
+                    padding-left: 40px;
+                    padding-right: 40px;
+                }
+            }
+        }
+    }
+    // outside navs, outside vertical dots
+    &.outside-navs {
+        &.outside-dots {
+            &.vertical-dots {
+                > .slides {
+                    // responsive
+                    @media(max-width: 359px) {
+                        padding-left: 18px;
+                        padding-right: 45px;
+                    }
+                    @media(min-width: 360px) and (max-width: 767.9px) {
+                        padding-left: 20px;
+                        padding-right: 48px;
+                    }
+                    @media(min-width: 768px) and (max-width: 991.9px) {
+                        padding-left: 30px;
+                        padding-right: 60px;
+                    }
+                    @media(min-width: 992px) and (max-width: 1199.9px) {
+                        padding-left: 35px;
+                        padding-right: 67px;
+                    }
+                    @media(min-width: 1200px) {
+                        padding-left: 40px;
+                        padding-right: 78px;
+                    }
+                }
+            }
+        }
+    }
+
+    // horizontal inside navs left and right outside vertical dots
+    &.horizontal-navs {
+        &.inside-navs {
+            &.outside-dots {
+                &.vertical-dots {
+                    &.left-dots {
+                        > .slides {
+                            // responsive
+                            @media(max-width: 359px) {
+                                padding-left: 15px;
+                            }
+                            @media(min-width: 360px) and (max-width: 767.9px) {
+                                padding-left: 16px;
+                            }
+                            @media(min-width: 768px) and (max-width: 991.9px) {
+                                padding-left: 20px;
+                            }
+                            @media(min-width: 992px) and (max-width: 1199.9px) {
+                                padding-left: 22px;
+                            }
+                            @media(min-width: 1200px) {
+                                padding-left: 26px;
+                            }
+                        }
+                    }
+                }
+            }
+            &.right-dots {
+                > .slides {
+                    // responsive
+                    @media(max-width: 359px) {
+                        padding-right: 15px;
+                    }
+                    @media(min-width: 360px) and (max-width: 767.9px) {
+                        padding-right: 16px;
+                    }
+                    @media(min-width: 768px) and (max-width: 991.9px) {
+                        padding-right: 20px;
+                    }
+                    @media(min-width: 992px) and (max-width: 1199.9px) {
+                        padding-right: 22px;
+                    }
+                    @media(min-width: 1200px) {
+                        padding-right: 26px;
+                    }
+                }
+            }
+        }
+    }
+    // horizontal outside navs left and right outside vertical dots
+    &.horizontal-navs {
+        &.outside-navs {
+            &.outside-dots {
+                &.vertical-dots {
+                    > .slides {
+                        // responsive
+                        @media(max-width: 359px) {
+                            padding-left: 18px;
+                            padding-right: 18px;
+                        }
+                        @media(min-width: 360px) and (max-width: 767.9px) {
+                            padding-left: 20px;
+                            padding-right: 20px;
+                        }
+                        @media(min-width: 768px) and (max-width: 991.9px) {
+                            padding-left: 30px;
+                            padding-right: 30px;
+                        }
+                        @media(min-width: 992px) and (max-width: 1199.9px) {
+                            padding-left: 35px;
+                            padding-right: 35px;
+                        }
+                        @media(min-width: 1200px) {
+                            padding-left: 40px;
+                            padding-right: 40px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // horizontal outside navs left and right inside vertical dots
+    &.horizontal-navs {
+        &.outside-navs {
+            &.inside-dots {
+                &.vertical-dots {
+                    > .slides {
+                        // responsive
+                        @media(max-width: 359px) {
+                            padding-left: 18px;
+                            padding-right: 18px;
+                        }
+                        @media(min-width: 360px) and (max-width: 767.9px) {
+                            padding-left: 20px;
+                            padding-right: 20px;
+                        }
+                        @media(min-width: 768px) and (max-width: 991.9px) {
+                            padding-left: 30px;
+                            padding-right: 30px;
+                        }
+                        @media(min-width: 992px) and (max-width: 1199.9px) {
+                            padding-left: 35px;
+                            padding-right: 35px;
+                        }
+                        @media(min-width: 1200px) {
+                            padding-left: 40px;
+                            padding-right: 40px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // vertical inside and outside navs left and right outside vertical dots
+    &.vertical-dots {
+        &.vertical-navs {
+            &.outside-dots {
+                &.left-dots {
+                    > .slides {
+                        // responsive
+                        @media(max-width: 359px) {
+                            padding-left: 15px;
+                        }
+                        @media(min-width: 360px) and (max-width: 767.9px) {
+                            padding-left: 16px;
+                        }
+                        @media(min-width: 768px) and (max-width: 991.9px) {
+                            padding-left: 20px;
+                        }
+                        @media(min-width: 992px) and (max-width: 1199.9px) {
+                            padding-left: 22px;
+                        }
+                        @media(min-width: 1200px) {
+                            padding-left: 26px;
+                        }
+                    }
+                }
+            }
+            &.right-dots {
+                > .slides {
+                    // responsive
+                    @media(max-width: 359px) {
+                        padding-right: 15px;
+                    }
+                    @media(min-width: 360px) and (max-width: 767.9px) {
+                        padding-right: 16px;
+                    }
+                    @media(min-width: 768px) and (max-width: 991.9px) {
+                        padding-right: 20px;
+                    }
+                    @media(min-width: 992px) and (max-width: 1199.9px) {
+                        padding-right: 22px;
+                    }
+                    @media(min-width: 1200px) {
+                        padding-right: 26px;
+                    }
+                }
+            }
+        }
+    }
+}

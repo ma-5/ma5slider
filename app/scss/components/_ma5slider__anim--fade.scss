@@ -1,0 +1,36 @@
+// anim-fade
+.anim-fade {
+    .slide--prev {
+        opacity: 0;
+    }
+    .slide--active {
+        opacity: 1;
+    }
+    .slide--next {
+        opacity: 0;
+    }
+    .slide {
+        &.transition-on {
+            &.slide--active {
+                transition: opacity .7s ease-in-out;
+            }
+
+            &.slide--prev,
+            &.slide--next {
+                transition: opacity .2s ease-in-out .5s;
+            }
+        }
+    }
+    &.transition-on {
+        .slide {
+            &.slide--active {
+                transition: opacity .7s ease-in-out;
+            }
+
+            &.slide--prev,
+            &.slide--next {
+                transition: opacity .2s ease-in-out .5s;
+            }
+        }
+    }
+}

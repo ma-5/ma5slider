@@ -1,0 +1,23 @@
+.nav__top {
+    top: 0;
+    bottom: auto;
+    left: 50%;
+    transform: translateX(-50%);
+
+    &:before {
+        transform: rotate(-90deg);
+        margin-left: -1px;
+    }
+}
+.nav__bottom {
+    top: auto;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    &:before {
+        transform: rotate(90deg);
+        margin-right: -4px;
+    }
+}
+
