@@ -222,13 +222,14 @@ Note: During mouse drag animation is always horizontal.
 ## HTML control
 
 External control elements for the slider.
+
 ```html
     <a class="ma5slider__control" href="#slide.." data-ma5slider="#example-33" data-ma5slide="4">Go to slide 4</a>
     <a class="ma5slider__control" href="#slide.." data-ma5slider="#example-33" data-ma5slide="first">First slide</a>
     <a class="ma5slider__control" href="#slide.." data-ma5slider="#example-33" data-ma5slide="previous">Previous slide</a>
     <a class="ma5slider__control" href="#slide.." data-ma5slider="#example-33" data-ma5slide="next">Next slide</a>
     <a class="ma5slider__control" href="#slide.." data-ma5slider="#example-33" data-ma5slide="last">Last slide</a>
-
+```
 
 [Example](http://ma5slider.ma5.pl/index-examples.html#ma5slider__control)
 
