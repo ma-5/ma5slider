@@ -24,7 +24,7 @@ Ease to use, lightweight and responsive jQuery Slider. Customizable by CSS class
         <link href="http://ma5slider.ma5.pl/css/ma5slider.min.css" rel="stylesheet" type="text/css">
         <script src="http://ma5slider.ma5.pl/js/ma5slider.min.js"></script>
          
-        <!-- Call the script -->
+        <!-- Call the script. Rule: use ID -->
         <script>
             $(window).on('load', function () {
                 ma5slider({ slider: "#example-1" });
