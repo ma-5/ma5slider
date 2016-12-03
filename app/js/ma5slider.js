@@ -90,19 +90,25 @@ function ma5sliderGoToSlide(elm, slideInput) {
     });
 }
 function ma5autoplay(tempo, elm) {
-     var parm = ma5sliderGetParameters(elm);
-     var counter = parm.currentSlide;
-     var autoplay = setInterval(function () {
-         counter++;
-         if (counter > parm.slideCount) {
-             counter = 1;
-         }
-         ma5sliderGoToSlide(elm, counter);
-     }, tempo);
-     $(elm).on('touch click', function () {
-         clearInterval(autoplay);
-         return true;
-     });
+    var parm = ma5sliderGetParameters(elm);
+    var counter = parm.currentSlide;
+    var autoplay = setInterval(function () {
+        counter++;
+        if (counter > parm.slideCount) {
+            counter = 1;
+        }
+        ma5sliderGoToSlide(elm, counter);
+    }, tempo);
+    $(elm).on('touch click', function () {
+        clearInterval(autoplay);
+        return true;
+    });
+    $(elm + ' .slides').mousemove(function() {
+        if ($(this).is('.ui-draggable-dragging')) {
+            clearInterval(autoplay);
+            return true;
+        }
+    });
 }
 function ma5makeNav(elm) {
     if (!$(elm).hasClass('vertical-navs')) {
@@ -403,7 +409,7 @@ function ma5slider(attributes) {
                 initialAnim = 'anim-fade';
             }
             const INITIAL_ANIM = initialAnim;
-            $(elm).attr('data-initial-anim', INITIAL_ANIM);
+            $(elm).attr('data-initial-anim', INITIAL_ANIM).addClass('dir-next');
             $(elm + ' > .slides').attr('data-ma5elm', elm);
             $(elm + ' > .slides').children().addClass('slide');
             $(elm + ' > .slides').append('<canvas class="canvas" width="' + parm.width + '" height="' + parm.height + '"></canvas>');
