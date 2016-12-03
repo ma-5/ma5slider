@@ -82,7 +82,7 @@ You can use a **CSS classes** next to **ma5slider** to the final appearance.
 
 | Class name | Description | Example page |
 -------------|-------------|---------------
-| horizontal-navs <span class="legend">default</span> | Arrows left and right. | [Example](http://ma5slider.ma5.pl/index-examples.html#horizontal-navs) |
+| horizontal-navs <span class="legend">default</span> | Arrows left and right.                                                                              | [Example](http://ma5slider.ma5.pl/index-examples.html#horizontal-navs) |
 | vertical-navs | Arrows top and bottom. | [Example](http://ma5slider.ma5.pl/index-examples.html#vertical-navs) |
 
 
