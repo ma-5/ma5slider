@@ -197,8 +197,7 @@ Global settings can be overwrite by attributess added to specific slide.
 
 | Attribute name | Description | Example page |
 -----------------|-------------|---------------
-| data-ma5-dot,
-data-ma5-dot-active | Overwrite dots colors for specific slide. | [Example](http://ma5slider.ma5.pl/index-examples.html#data-ma5-dot) |
+| data-ma5-dot, data-ma5-dot-active | Overwrite dots colors for specific slide. | [Example](http://ma5slider.ma5.pl/index-examples.html#data-ma5-dot) |
 
 
 
