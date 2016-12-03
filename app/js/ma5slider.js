@@ -12,8 +12,8 @@
 function ma5sliderGetParameters(elm) {
     var parm = {
         slider: elm,
-        width: $(elm + ' .slides img').width(),
-        height: $(elm + ' .slides img').height(),
+        width: $(elm + ' .slides').width(),
+        height: $(elm + ' .slides').height(),
         slideCount: Number($(elm + ' .slides > *').length) - 1,
         loopMode: $(elm).hasClass('loop-mode'),
         currentSlide: Number($(elm + ' .slide--active').index()) + 1,
@@ -433,8 +433,8 @@ function ma5slider(attributes) {
             ma5sliderUpdateDirection(elm);
             ma5sliderUpdateAnim(elm, 1);
             ma5sliderFirstLastDetect(elm, 1);
-            $(elm + ' .slides').attr('data-ma5elm-width', $(elm + ' .slides img').width());
-            $(elm + ' .slides').attr('data-ma5elm-height', $(elm + ' .slides img').height());
+            $(elm + ' .slides').attr('data-ma5elm-width', $(elm + ' .slides').width());
+            $(elm + ' .slides').attr('data-ma5elm-height', $(elm + ' .slides').height());
             if (jQuery().draggable) {
                 $(elm + ' .slides').ma5draggable();
             }
@@ -456,9 +456,11 @@ function ma5slider(attributes) {
             }
         }
     } else {
-        $(elm + ' .slides').attr('data-ma5elm-width', $(elm + ' .slides img').width());
-        $(elm + ' .slides').attr('data-ma5elm-height', $(elm + ' .slides img').height());
-        $(elm + ' .slides').ma5draggable();
+        $(document).ready(function () {
+            $(elm + ' .slides').attr('data-ma5elm-width', $(elm + ' .slides').width());
+            $(elm + ' .slides').attr('data-ma5elm-height', $(elm + ' .slides').height());
+            $(elm + ' .slides').ma5draggable();
+        });
     }
 }
 $(document).ready(function () {
@@ -468,7 +470,7 @@ $(document).ready(function () {
 });
 $(window).resize(function(){
     ma5slider({
-        slider:'.ma5slider'
+        slider: '.ma5slider'
     });
 });
 //  MA5 Slider Mouse Draggable Extension for jQuery UI
@@ -571,7 +573,7 @@ if (jQuery().draggable) {
                             if (ui.position.top > 0) {
                                 if (parm.loopMode === false && $(parm.slider + ' .slide--active').index() === 0) {
                                 } else {
-                                    $(this).parent().parent().parent().removeClass('drag-next').addClass('drag-prev dir-prev');
+                                    $(slider).removeClass('drag-next').addClass('drag-prev dir-prev');
                                     if (ui.position.top >= Vars.itemHeightBreakpoint) {
                                         $(this).draggable("option", "revert", false);
                                         $(this).animate({
@@ -586,7 +588,7 @@ if (jQuery().draggable) {
                             } else {
                                 if (parm.loopMode === false && parm.currentSlide == parm.slideCount) {
                                 } else {
-                                    $(this).parent().parent().parent().removeClass('drag-prev').addClass('drag-next dir-prev');
+                                    $(slider).removeClass('drag-prev').addClass('drag-next dir-prev');
                                     if (ui.position.top <= Vars.itemHeightBreakpointSub) {
                                         $(this).draggable("option", "revert", false);
                                         $(this).animate({
