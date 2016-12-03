@@ -375,79 +375,90 @@ function ma5slider(attributes) {
     if (attributes.slider !== undefined) {
         elm = attributes.slider;
     }
-    if ($(elm).length) {
-        var parm = ma5sliderGetParameters(elm);
-        var autoplayTime = Number($(elm).attr('data-tempo'));
-        if (parm.loopMode !== true) {
-            $(elm).addClass('first-slide');
-        }
-        if (autoplayTime === undefined) {
-            autoplayTime = 3000;
-        }
-        var str = $(elm).attr('class');
-        if (str !== undefined) {
-            if (!~str.indexOf("anim-")) {
-                $(elm).addClass('anim-horizontal');
+    var ma5sliderInit = $(elm).data('ma5slider');
+    if(ma5sliderInit === undefined) {
+        $(elm).data('ma5slider', {
+            slider: elm
+        });
+
+        if ($(elm).length) {
+            var parm = ma5sliderGetParameters(elm);
+            var autoplayTime = Number($(elm).attr('data-tempo'));
+            if (parm.loopMode !== true) {
+                $(elm).addClass('first-slide');
+            }
+            if (autoplayTime === undefined) {
+                autoplayTime = 3000;
+            }
+            var str = $(elm).attr('class');
+            if (str !== undefined) {
+                if (!~str.indexOf("anim-")) {
+                    $(elm).addClass('anim-horizontal');
+                }
+            }
+            var initialAnim = 'anim-horizontal';
+            if ($(elm).hasClass('anim-vertical')) {
+                initialAnim = 'anim-vertical';
+            } else if ($(elm).hasClass('anim-fade')) {
+                initialAnim = 'anim-fade';
+            }
+            const INITIAL_ANIM = initialAnim;
+            $(elm).attr('data-initial-anim', INITIAL_ANIM);
+            $(elm + ' > .slides').attr('data-ma5elm', elm);
+            $(elm + ' > .slides').children().addClass('slide');
+            $(elm + ' > .slides').append('<canvas class="canvas" width="' + parm.width + '" height="' + parm.height + '"></canvas>');
+            if (parm.slideCount < 1) {
+                $(elm + ' .slides > .slide').addClass('slide--active');
+                $(elm).removeClass('inside-dots, outside-dots, left-dots, center-dots, right-dots, top-dots, bottom-dots').addClass('one-slide');
+                return false;
+            } else {
+                $(elm + ' .slides > .slide:nth-child(' + (parm.slideCount + 1) + ')').addClass('slide--prev js-op');
+                $(elm + ' .slides > .slide:nth-child(1)').addClass('slide--active js-oa');
+                $(elm + ' .slides > .slide:nth-child(2)').addClass('slide--next js-on');
+            }
+            if((parm.slideCount == 1 ) ) {
+                $(elm ).addClass('safe-slides');
+            }
+            $(elm + ' .slides').wrap('<div class="navs-wrapper"><div class="slide-area"></div></div>');
+            if (!~str.indexOf("-navs")) {
+                $(elm).addClass('hidden-navs');
+            }
+            if (!~str.indexOf("-dots")) {
+                $(elm).addClass('hidden-dots');
+            }
+            ma5makeNav(elm);
+            ma5makeDots(elm);
+            ma5sliderUpdateDotsColors(elm);
+            ma5sliderUpdateNavsColors(elm);
+            ma5sliderUpdateDirection(elm);
+            ma5sliderUpdateAnim(elm, 1);
+            ma5sliderFirstLastDetect(elm, 1);
+            $(elm + ' .slides').attr('data-ma5elm-width', $(elm + ' .slides img').width());
+            $(elm + ' .slides').attr('data-ma5elm-height', $(elm + ' .slides img').height());
+            if (jQuery().draggable) {
+                $(elm + ' .slides').ma5draggable();
+            }
+            $(elm + ' .nav--next').on('touch click', function () {
+                ma5sliderGoToNext(elm);
+            });
+            $(elm + ' .nav--prev').on('touch click', function () {
+                ma5sliderGoToPrev(elm);
+            });
+            $(elm + ' .dot').on('touch click', function () {
+                var target = Number($(this).attr('data-target'));
+                ma5sliderGoToSlideDotTarget(elm, target);
+            });
+            $('.ma5slider__control').on('touch click', function () {
+                externalControl(this);
+            });
+            if ($(elm).hasClass('autoplay')) {
+                ma5autoplay(autoplayTime, elm);
             }
         }
-        var initialAnim = 'anim-horizontal';
-        if ($(elm).hasClass('anim-vertical')) {
-            initialAnim = 'anim-vertical';
-        } else if ($(elm).hasClass('anim-fade')) {
-            initialAnim = 'anim-fade';
-        }
-        const INITIAL_ANIM = initialAnim;
-        $(elm).attr('data-initial-anim', INITIAL_ANIM);
-        $(elm + ' > .slides').attr('data-ma5elm', elm);
-        $(elm + ' > .slides').children().addClass('slide');
-        $(elm + ' > .slides').append('<canvas class="canvas" width="' + parm.width + '" height="' + parm.height + '"></canvas>');
-        if (parm.slideCount < 1) {
-            $(elm + ' .slides > .slide').addClass('slide--active');
-            $(elm).removeClass('inside-dots, outside-dots, left-dots, center-dots, right-dots, top-dots, bottom-dots').addClass('one-slide');
-            return false;
-        } else {
-            $(elm + ' .slides > .slide:nth-child(' + (parm.slideCount + 1) + ')').addClass('slide--prev js-op');
-            $(elm + ' .slides > .slide:nth-child(1)').addClass('slide--active js-oa');
-            $(elm + ' .slides > .slide:nth-child(2)').addClass('slide--next js-on');
-        }
-        if((parm.slideCount == 1 ) ) {
-            $(elm ).addClass('safe-slides');
-        }
-        $(elm + ' .slides').wrap('<div class="navs-wrapper"><div class="slide-area"></div></div>');
-        if (!~str.indexOf("-navs")) {
-            $(elm).addClass('hidden-navs');
-        }
-        if (!~str.indexOf("-dots")) {
-            $(elm).addClass('hidden-dots');
-        }
-        ma5makeNav(elm);
-        ma5makeDots(elm);
-        ma5sliderUpdateDotsColors(elm);
-        ma5sliderUpdateNavsColors(elm);
-        ma5sliderUpdateDirection(elm);
-        ma5sliderUpdateAnim(elm, 1);
-        ma5sliderFirstLastDetect(elm, 1);
+    } else {
         $(elm + ' .slides').attr('data-ma5elm-width', $(elm + ' .slides img').width());
         $(elm + ' .slides').attr('data-ma5elm-height', $(elm + ' .slides img').height());
-        if (jQuery().draggable) {
-            $(elm + ' .slides').ma5draggable();
-        }
-        $(elm + ' .nav--next').on('touch click', function () {
-            ma5sliderGoToNext(elm);
-        });
-        $(elm + ' .nav--prev').on('touch click', function () {
-            ma5sliderGoToPrev(elm);
-        });
-        $(elm + ' .dot').on('touch click', function () {
-            var target = Number($(this).attr('data-target'));
-            ma5sliderGoToSlideDotTarget(elm, target);
-        });
-        $('.ma5slider__control').on('touch click', function () {
-            externalControl(this);
-        });
-        if ($(elm).hasClass('autoplay')) {
-            ma5autoplay(autoplayTime, elm);
-        }
+        $(elm + ' .slides').ma5draggable();
     }
 }
 $(document).ready(function () {
@@ -455,7 +466,11 @@ $(document).ready(function () {
         return false;
     });
 });
-
+$(window).resize(function(){
+    ma5slider({
+        slider:'.ma5slider'
+    });
+});
 //  MA5 Slider Mouse Draggable Extension for jQuery UI
 if (jQuery().draggable) {
     (function ($) {
