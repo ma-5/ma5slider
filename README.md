@@ -222,7 +222,6 @@ Note: During mouse drag animation is always horizontal.
 | data-ma5-anim | Overwrite animation for specific slide. | [Example](http://ma5slider.ma5.pl/index-examples.html#data-ma5-anim) |
 
 
-
 ## HTML control
 
 External control elements for the slider.
