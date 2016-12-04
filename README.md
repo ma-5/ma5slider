@@ -216,7 +216,6 @@ Global settings can be overwrite by attributess added to specific slide.
 Note: During mouse drag animation is always horizontal.
 
 
-
 | Attribute name | Description | Example page |
 -----------------|-------------|---------------
 | data-ma5-anim | Overwrite animation for specific slide. | [Example](http://ma5slider.ma5.pl/index-examples.html#data-ma5-anim) |
