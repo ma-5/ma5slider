@@ -338,7 +338,6 @@ function externalControl(control) {
             target = parm.slideCount;
         }
         if (target != parm.currentSlide) {
-            //var trg = Number(target);
             $(elm + ' > .dots').addClass('dots-disabled');
             ma5sliderGoToSlide(elm, Number(target));
         }
