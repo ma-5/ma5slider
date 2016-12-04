@@ -57,7 +57,7 @@ Ease to use, lightweight and responsive jQuery Slider. Customizable by CSS class
 You can use a **CSS classes** next to **ma5slider** to the final appearance.
 
 ```html
-    <div id="example..." class="ma5slider anim-horizontal top-dots outside-navs ...">
+<div id="example..." class="ma5slider anim-horizontal top-dots outside-navs ...">
 ```
 
 **Tip:** Slider without CSS classes for dots hides dots. Slider without CSS classes for arrows hides arrows.
@@ -228,11 +228,11 @@ Note: During mouse drag animation is always horizontal.
 External control elements for the slider.
 
 ```html
-    <a class="ma5slider__control" href="#slide.." data-ma5slider="#example-33" data-ma5slide="4">Go to slide 4</a>
-    <a class="ma5slider__control" href="#slide.." data-ma5slider="#example-33" data-ma5slide="first">First slide</a>
-    <a class="ma5slider__control" href="#slide.." data-ma5slider="#example-33" data-ma5slide="previous">Previous slide</a>
-    <a class="ma5slider__control" href="#slide.." data-ma5slider="#example-33" data-ma5slide="next">Next slide</a>
-    <a class="ma5slider__control" href="#slide.." data-ma5slider="#example-33" data-ma5slide="last">Last slide</a>
+<a class="ma5slider__control" href="#slide.." data-ma5slider="#example-33" data-ma5slide="4">Go to slide 4</a>
+<a class="ma5slider__control" href="#slide.." data-ma5slider="#example-33" data-ma5slide="first">First slide</a>
+<a class="ma5slider__control" href="#slide.." data-ma5slider="#example-33" data-ma5slide="previous">Previous slide</a>
+<a class="ma5slider__control" href="#slide.." data-ma5slider="#example-33" data-ma5slide="next">Next slide</a>
+<a class="ma5slider__control" href="#slide.." data-ma5slider="#example-33" data-ma5slide="last">Last slide</a>
 ```
 
 [Example](http://ma5slider.ma5.pl/index-examples.html#ma5slider__control)
@@ -242,51 +242,42 @@ External control elements for the slider.
 **1\. Go to slide**
 
 ```javascript
-    <script>
-        $(document).ready(function () {
-           ma5sliderGoToSlide('#slider', 3 );
-        });
-    </script>
+$(document).ready(function () {
+   ma5sliderGoToSlide('#slider', 3 );
+});
 ```
 
 **2\. Go to next slide**
 
 ```javascript
-    <script>
-        $(document).ready(function () {
-           ma5sliderGoToNext('#slider');
-        });
-    </script>
+$(document).ready(function () {
+   ma5sliderGoToNext('#slider');
+});
 ```
 
 **3\. Go to previous slide**
 
 ```javascript
-    <script>
-        $(document).ready(function () {
-           ma5sliderGoToPrev('#slider');
-        });
-    </script>
+$(document).ready(function () {
+   ma5sliderGoToPrev('#slider');
+});
+
 ```
 
 **4\. Go to first slide**
 
 ```javascript
-    <script>
-        $(document).ready(function () {
-           ma5sliderGoToFirst('#slider');
-        });
-    </script>
+$(document).ready(function () {
+   ma5sliderGoToFirst('#slider');
+});
 ```
 
 **4\. Go to last slide**
 
 ```javascript
-    <script>
-        $(document).ready(function () {
-           ma5sliderGoToLast('#slider');
-        });
-    </script>
+$(document).ready(function () {
+   ma5sliderGoToLast('#slider');
+});
 ```
 
 [Example](http://ma5slider.ma5.pl/index-examples.html#script-control-slide-number)
