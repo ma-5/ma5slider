@@ -2,7 +2,7 @@
 
 /*!
  *   MA5-Slider
- *   v 1.0.0
+ *   v 1.0.1
  *   Copyright (c) 2016 Tomasz Kalinowski
  *   http://ma5slider.ma5.pl
  *   GitHub: https://github.com/ma-5/ma5slider
