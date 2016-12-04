@@ -261,7 +261,6 @@ $(document).ready(function () {
 $(document).ready(function () {
    ma5sliderGoToPrev('#slider');
 });
-
 ```
 
 **4\. Go to first slide**
