@@ -5,39 +5,37 @@ Ease to use, lightweight and responsive jQuery Slider. Customizable by CSS class
 
 ##Quick start
 
-**Rule:** use the **unique ID** for each slider.
 
 **HTML in HEAD**:
 
 ```html
-    <head>
-        <!-- jQuery -->
-        <script src="http://ma5slider.ma5.pl/js/jquery.min.js"></script>
-         
-        <!-- jQuery UI mouse draggable widget (optional) -->
-        <script src="http://ma5slider.ma5.pl/js/jquery-ui.min.js"></script>
-         
-        <!-- Touch Event Support for jQuery UI (optional) -->
-        <script src="http://ma5slider.ma5.pl/js/jquery.ui.touch-punch.min.js"></script>
-         
-        <!-- MA5 Slider -->
-        <link href="http://ma5slider.ma5.pl/css/ma5slider.min.css" rel="stylesheet" type="text/css">
-        <script src="http://ma5slider.ma5.pl/js/ma5slider.min.js"></script>
-         
-        <!-- Call the script. Rule: use ID -->
-        <script>
-            $(window).on('load', function () {
-                ma5slider({ slider: "#example-1" });
-            });
-        </script>
-    </head>
+<head>
+    <!-- jQuery -->
+    <script src="http://ma5slider.ma5.pl/js/jquery.min.js"></script>
+     
+    <!-- jQuery UI mouse draggable widget -->
+    <script src="http://ma5slider.ma5.pl/js/jquery-ui.min.js"></script>
+     
+    <!-- Touch Event Support for jQuery UI -->
+    <script src="http://ma5slider.ma5.pl/js/jquery.ui.touch-punch.min.js"></script>
+     
+    <!-- MA5 Slider -->
+    <link href="http://ma5slider.ma5.pl/css/ma5slider.min.css" rel="stylesheet" type="text/css">
+    <script src="http://ma5slider.ma5.pl/js/ma5slider.min.js"></script>
+     
+    <script>
+        $(window).on('load', function () {
+            $('.ma5slider').ma5slider();
+        });
+    </script>
+</head>
 ```
 
 **HTML in BODY**:
 
 ```html
     <body>
-        <div id="example-1" class="ma5slider outside-navs outside-dots anim-horizontal loop-mode">
+        <div class="ma5slider outside-navs outside-dots anim-horizontal loop-mode">
             <div class="slides">
                 <!-- children = slides -->
                 <a href="#slide-1"><img src="http://ma5slider.ma5.pl/images/DSC_0916.jpg" alt=""></a>
@@ -61,8 +59,6 @@ You can use a **CSS classes** next to **ma5slider** to the final appearance.
 ```
 
 **Tip:** Slider without CSS classes for dots hides dots. Slider without CSS classes for arrows hides arrows.
-
-**Rule:** Use **ID** for each slider.
 
 **Rule:** You can choose **only one parameter** of each module.
 
@@ -235,47 +231,71 @@ External control elements for the slider.
 
 [Example](http://ma5slider.ma5.pl/index-examples.html#ma5slider__control)
 
-## Script control
+## Methods
 
 **1\. Go to slide**
 
 ```javascript
-$(document).ready(function () {
-   ma5sliderGoToSlide('#slider', 3 );
-});
+$('.ma5slider').ma5slider('goToSlide', 3);
 ```
 
 **2\. Go to next slide**
 
 ```javascript
-$(document).ready(function () {
-   ma5sliderGoToNext('#slider');
-});
+$('.ma5slider').ma5slider('goToNext');
 ```
 
 **3\. Go to previous slide**
 
 ```javascript
-$(document).ready(function () {
-   ma5sliderGoToPrev('#slider');
-});
+$('.ma5slider').ma5slider('goToPrev');
 ```
 
 **4\. Go to first slide**
 
 ```javascript
-$(document).ready(function () {
-   ma5sliderGoToFirst('#slider');
-});
+$('.ma5slider').ma5slider('goToFirst');
 ```
 
 **4\. Go to last slide**
 
 ```javascript
-$(document).ready(function () {
-   ma5sliderGoToLast('#slider');
+$('.ma5slider').ma5slider('goToLast');
+```
+
+## Events
+
+**1\. Slide animation start**
+```javascript
+$('.ma5slider').on('ma5.animationStart', function () {
+    console.log('event animationStart');
 });
 ```
+**2\. Slide animation end**
+```javascript
+$('.ma5slider').on('ma5.animationEnd', function () {
+    console.log('event animationEnd');
+});
+```
+**3\. On first slide**
+```javascript
+$('.ma5slider').on('ma5.firstSlide', function () {
+    console.log('event firstSlide');
+});
+```
+**4\. On last slide**
+```javascript
+$('.ma5slider').on('ma5.lastSlide', function () {
+    console.log('event lastSlide');
+});
+```
+**5\. Return active slide number**
+```javascript
+$('.ma5slider').on('ma5.activeSlide', function (event, slide) {
+    console.log( 'event activeSlide: ' + slide );
+});
+```
+
 
 [Example](http://ma5slider.ma5.pl/index-examples.html#script-control-slide-number)
 
