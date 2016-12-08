@@ -14,7 +14,19 @@
     <link href="./css/main.min.css" rel="stylesheet" type="text/css">
     <script src="./js/run_prettify.js"></script>
     <script src="./js/jquery.min.js"></script>
+    <script src="./js/jquery-ui.min.js"></script>
+    <script src="./js/jquery.ui.touch-punch.min.js"></script>
     <script src="./js/functions.js"></script>
+
+    <!-- MA5 Slider-->
+    <link href="./css/ma5slider.min.css" rel="stylesheet" type="text/css">
+    <script src="../app/js/ma5slider.js"></script>
+
+    <script>
+        $(window).on('load', function () {
+            $('.ma5slider').ma5slider();
+        });
+    </script>
 
 </head>
 <body itemscope="" itemtype="http://schema.org/WebPage">
@@ -41,8 +53,8 @@
     <div class="container">
         <div class="hero-item">
             <h1><a href="http://ma5slider.ma5.pl">MA5-Slider</a></h1>
-            <p class="description">Ease to use, lightweight and responsive jQuery Slider. Customizable by CSS classes. Custom animations for each slide. <br>Javascript 16kB</p>
-            <p><a href="https://github.com/ma-5/ma5slider" target="_blank">Github</a> v 1.0.0</p>
+            <p class="description">Ease to use, lightweight and responsive jQuery UI Slider. Customizable by CSS classes. Custom animations for each slide. <br>Javascript 16kB</p>
+            <p><a href="https://github.com/ma-5/ma5slider" target="_blank">Github</a> v 1.1.0</p>
         </div>
     </div>
 </header><div class="container">
@@ -433,55 +445,54 @@
 
     <br><br><br>
 
-    <h2>Script control</h2>
-    <p><b>1. Go to slide</b></p>
+    <h2>Methods and events</h2>
+
 <pre class="prettyprint lang-js">
-&lt;script&gt;
-    $(document).ready(function () {
-       ma5sliderGoToSlide('#slider', 3 );
+    //// Methods
+
+    // Go to previous slide
+    $('.ma5slider').ma5slider('goToPrev');
+
+    // Go to next slide
+    $('.ma5slider').ma5slider('goToNext');
+
+    // Go to first slide
+    $('.ma5slider').ma5slider('goToFirst');
+
+    // Go to last slide
+    $('.ma5slider').ma5slider('goToLast');
+
+    // Go to 3 slide
+    $('.ma5slider').ma5slider('goToSlide', 3);
+
+    //// Events
+
+    // Slide animation start
+    $('.ma5slider').on('ma5.animationStart', function () {
+        console.log('event animationStart');
     });
-&lt;/script&gt;
+
+    // Slide animation end
+    $('.ma5slider').on('ma5.animationEnd', function () {
+        console.log('event animationEnd');
+    });
+
+    // On first slide
+    $('.ma5slider').on('ma5.firstSlide', function () {
+        console.log('event firstSlide');
+    });
+
+    // On last slide
+    $('.ma5slider').on('ma5.lastSlide', function () {
+        console.log('event lastSlide');
+    });
+
+    // Return active slide number
+    $('.ma5slider').on('ma5.activeSlide', function (event, slide) {
+        console.log( 'event activeSlide: ' + slide );
+    });
 </pre>
 
-
-    <p><b>2. Go to next slide</b></p>
-<pre class="prettyprint lang-js">
-&lt;script&gt;
-    $(document).ready(function () {
-       ma5sliderGoToNext('#slider');
-    });
-&lt;/script&gt;
-</pre>
-
-    <p><b>3. Go to previous slide</b></p>
-<pre class="prettyprint lang-js">
-&lt;script&gt;
-    $(document).ready(function () {
-       ma5sliderGoToPrev('#slider');
-    });
-&lt;/script&gt;
-</pre>
-
-
-    <p><b>4. Go to first slide</b></p>
-
-    <pre class="prettyprint lang-js">
-&lt;script&gt;
-    $(document).ready(function () {
-       ma5sliderGoToFirst('#slider');
-    });
-&lt;/script&gt;
-</pre>
-
-    <p><b>4. Go to last slide</b></p>
-
-    <pre class="prettyprint lang-js">
-&lt;script&gt;
-    $(document).ready(function () {
-       ma5sliderGoToLast('#slider');
-    });
-&lt;/script&gt;
-</pre>
 
     <a class="btn btn-primary" href="./index-examples.html#script-control-slide-number">Example</a>
 

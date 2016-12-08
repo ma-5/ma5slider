@@ -19,47 +19,29 @@
 
     <!-- MA5 Slider-->
     <link href="./css/ma5slider.min.css" rel="stylesheet" type="text/css">
-    <script src="./js/ma5slider.min.js"></script>
+    <script src="../app/js/ma5slider.js"></script>
 
     <script>
         $(window).on('load', function () {
-            ma5slider({ slider:'#example-01' });
-            ma5slider({ slider:'#example-02' });
-            ma5slider({ slider:'#example-03' });
-            ma5slider({ slider:'#example-04' });
-            ma5slider({ slider:'#example-05' });
-            ma5slider({ slider:'#example-06' });
-            ma5slider({ slider:'#example-07' });
-            ma5slider({ slider:'#example-08' });
-            ma5slider({ slider:'#example-09' });
-            ma5slider({ slider:'#example-10' });
-            ma5slider({ slider:'#example-11' });
-            ma5slider({ slider:'#example-12' });
-            ma5slider({ slider:'#example-13' });
-            ma5slider({ slider:'#example-14' });
-            ma5slider({ slider:'#example-15' });
-            ma5slider({ slider:'#example-16' });
-            ma5slider({ slider:'#example-17' });
-            ma5slider({ slider:'#example-18' });
-            ma5slider({ slider:'#example-19' });
-            ma5slider({ slider:'#example-20' });
-            ma5slider({ slider:'#example-21' });
-            ma5slider({ slider:'#example-22' });
-            ma5slider({ slider:'#example-23' });
-            ma5slider({ slider:'#example-24' });
-            ma5slider({ slider:'#example-25' });
-            ma5slider({ slider:'#example-26' });
-            ma5slider({ slider:'#example-27' });
-            ma5slider({ slider:'#example-28' });
-            ma5slider({ slider:'#example-29' });
-            ma5slider({ slider:'#example-30' });
-            ma5slider({ slider:'#example-31' });
-            ma5slider({ slider:'#example-32' });
-            ma5slider({ slider:'#example-33' });
-            ma5slider({ slider:'#example-34' });
-            ma5slider({ slider:'#example-35' });
-            ma5sliderGoToSlide('#example-34', 3);
-
+            $('.ma5slider').ma5slider();
+            // Methods
+            $('#example-34').ma5slider('goToSlide', 3);
+            // Calls
+            $('#example-34').on('ma5.animationStart', function () {
+                console.log('event animationStart');
+            });
+            $('#example-34').on('ma5.animationEnd', function () {
+                console.log('event animationEnd');
+            });
+            $('#example-34').on('ma5.firstSlide', function () {
+                console.log('event firstSlide');
+            });
+            $('#example-34').on('ma5.lastSlide', function () {
+                console.log('event lastSlide');
+            });
+            $('#example-34').on('ma5.activeSlide', function (event, slide) {
+                console.log( 'event activeSlide: ' + slide );
+            });
         });
     </script>
 </head>
@@ -87,8 +69,8 @@
     <div class="container">
         <div class="hero-item">
             <h1><a href="http://ma5slider.ma5.pl">MA5-Slider</a></h1>
-            <p class="description">Ease to use, lightweight and responsive jQuery Slider. Customizable by CSS classes. Custom animations for each slide. <br>Javascript 16kB</p>
-            <p><a href="https://github.com/ma-5/ma5slider" target="_blank">Github</a> v 1.0.0</p>
+            <p class="description">Ease to use, lightweight and responsive jQuery UI Slider. Customizable by CSS classes. Custom animations for each slide. <br>Javascript 16kB</p>
+            <p><a href="https://github.com/ma-5/ma5slider" target="_blank">Github</a> v 1.1.0</p>
         </div>
     </div>
 </header><div class="container">

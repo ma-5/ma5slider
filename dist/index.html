@@ -19,13 +19,11 @@
 
     <!-- MA5 Slider-->
     <link href="./css/ma5slider.min.css" rel="stylesheet" type="text/css">
-    <script src="./js/ma5slider.min.js"></script>
+    <script src="../app/js/ma5slider.js"></script>
 
     <script>
         $(window).on('load', function () {
-            ma5slider({
-                slider:'#sample-1'
-            });
+            $('.ma5slider').ma5slider();
         });
     </script>
 </head>
@@ -53,8 +51,8 @@
     <div class="container">
         <div class="hero-item">
             <h1><a href="http://ma5slider.ma5.pl">MA5-Slider</a></h1>
-            <p class="description">Ease to use, lightweight and responsive jQuery Slider. Customizable by CSS classes. Custom animations for each slide. <br>Javascript 16kB</p>
-            <p><a href="https://github.com/ma-5/ma5slider" target="_blank">Github</a> v 1.0.0</p>
+            <p class="description">Ease to use, lightweight and responsive jQuery UI Slider. Customizable by CSS classes. Custom animations for each slide. <br>Javascript 16kB</p>
+            <p><a href="https://github.com/ma-5/ma5slider" target="_blank">Github</a> v 1.1.0</p>
         </div>
     </div>
 </header><div class="container">
@@ -75,16 +73,16 @@
 
 <div class="vspace">
     <h2>Quick start</h2>
-    <p><b>Rule:</b> If you plan to use a few sliders at the page, use the unique <b>ID</b> for each slider.</p>
+
     <p>HTML in &lt;head&gt;:</p>
     <pre class="prettyprint lang-html linenums">
     &lt;!-- jQuery --&gt;
     &lt;script src="./js/jquery.min.js"&gt;&lt;/script&gt;
 
-    &lt;!-- jQuery UI mouse draggable widget (optional) --&gt;
+    &lt;!-- jQuery UI mouse draggable widget --&gt;
     &lt;script src="./js/jquery-ui.min.js"&gt;&lt;/script&gt;
 
-    &lt;!-- Touch Event Support for jQuery UI (optional) --&gt;
+    &lt;!-- Touch Event Support for jQuery UI --&gt;
     &lt;script src="./js/jquery.ui.touch-punch.min.js"&gt;&lt;/script&gt;
 
     &lt;!-- MA5 Slider --&gt;
@@ -94,13 +92,13 @@
     &lt;!-- Call the script --&gt;
     &lt;script&gt;
         $(window).on('load', function () {
-            ma5slider({ slider: "<span class="accent">#sample-1</span>" });
+           $('.ma5slider').ma5slider();
         });
     &lt;/script&gt;
     </pre>
     <p>HTML in &lt;body&gt;:</p>
     <pre class="prettyprint lang-html linenums">
-    &lt;div id="<span class="accent">sample-1</span>" class="ma5slider outside-navs outside-dots anim-horizontal loop-mode"&gt;
+    &lt;div class="ma5slider outside-navs outside-dots anim-horizontal loop-mode"&gt;
         &lt;div class="slides"&gt;
             &lt;!-- children = slides --&gt;
             &lt;a href="#slide-1"&gt;&lt;img src="./images/01.jpg" alt=""&gt;&lt;/a&gt;
