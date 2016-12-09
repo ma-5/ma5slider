@@ -15,6 +15,7 @@ $.widget("ma5.ma5slider", {
         anim: 'anim-horizontal'
     },
     _create: function () {
+        console.log('qq');
         var widgetThis = this;
         var elm = this.element;
         var slides = elm.find('.slides');
@@ -105,11 +106,15 @@ $.widget("ma5.ma5slider", {
     // public method.
     goToSlide: function (slideInput) {
         var elm = this.element;
+        var parm = this._parm();
+        if(slideInput == 'current') {
+            slideInput = parm.currentSlide;
+        }
         setTimeout(function () {
             elm.trigger('ma5.activeSlide', [slideInput]);
         },1);
         var widgetThis = this;
-        var parm = this._parm();
+
         if (slideInput < 1) {
             slideInput = 1;
         }
@@ -183,6 +188,10 @@ $.widget("ma5.ma5slider", {
                     }
                 });
             }, 50);
+        } else {
+            if (jQuery().draggable) {
+                widgetThis._ma5draggable();
+            }
         }
     },
     goToPrev: function () {
@@ -637,6 +646,18 @@ $.widget("ma5.ma5slider", {
         }
         return this;
     }
+});
+
+// Block link drag
+$(document).ready(function () {
+    $(document).on("dragstart", ".ma5slider a", function () {
+        return false;
+    });
+});
+
+// Refresh for responsive
+$(window).resize(function () {
+    $('.ma5slider').ma5slider('goToSlide', 'current');
 });
 
 // External control extension
