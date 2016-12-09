@@ -15,7 +15,6 @@ $.widget("ma5.ma5slider", {
         anim: 'anim-horizontal'
     },
     _create: function () {
-        console.log('qq');
         var widgetThis = this;
         var elm = this.element;
         var slides = elm.find('.slides');
