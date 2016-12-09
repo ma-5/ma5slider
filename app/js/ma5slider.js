@@ -12,11 +12,7 @@
 $.widget("ma5.ma5slider", {
     options: {
         autoplayTime: 3000,
-        anim: 'anim-horizontal',
-        dotsNesting: 'outside-dots',
-        dotsOrdering: 'center-dots',
-        dotsAlign: 'outside-dots',
-        dotsHover: false
+        anim: 'anim-horizontal'
     },
     _create: function () {
         var widgetThis = this;
