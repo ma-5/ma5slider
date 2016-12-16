@@ -2,7 +2,7 @@
 
 /*!
  *   MA5-Slider
- *   v 1.1.0
+ *   v 1.1.1
  *   Copyright (c) 2016 Tomasz Kalinowski
  *   http://ma5slider.ma5.pl
  *   GitHub: https://github.com/ma-5/ma5slider
@@ -154,7 +154,7 @@ $.widget("ma5.ma5slider", {
                 elm.trigger('ma5.animationStart');
 
                 var one = true;
-                elm.find('.js-na').on("webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend", function () {
+                elm.find('.js-na').one("webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend", function () {
                     if (one === true) {
                         one = false;
                         if (slide == parm.slideCount) {
