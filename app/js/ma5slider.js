@@ -2,7 +2,7 @@
 
 /*!
  *   MA5-Slider
- *   v 1.1.1
+ *   v 1.1.2
  *   Copyright (c) 2016 Tomasz Kalinowski
  *   http://ma5slider.ma5.pl
  *   GitHub: https://github.com/ma-5/ma5slider
@@ -61,9 +61,9 @@ $.widget("ma5.ma5slider", {
                 elm.removeClass('inside-dots, outside-dots, left-dots, center-dots, right-dots, top-dots, bottom-dots').addClass('one-slide');
                 return false;
             } else {
-                parm.slides.find('> .slide:nth-child(' + (parm.slideCount + 1) + ')').addClass('slide--prev js-op');
-                parm.slides.find('> .slide:nth-child(1)').addClass('slide--active js-oa');
-                parm.slides.find('> .slide:nth-child(2)').addClass('slide--next js-on');
+                parm.slides.find('> .slide:nth-child(' + (parm.slideCount + 1) + ')').addClass('slide--prev');
+                parm.slides.find('> .slide:nth-child(1)').addClass('slide--active');
+                parm.slides.find('> .slide:nth-child(2)').addClass('slide--next');
             }
             if (parm.slideCount == 1) {
                 elm.addClass('safe-slides');
@@ -122,6 +122,9 @@ $.widget("ma5.ma5slider", {
         }
         var slide = slideInput;
         if (slide !== parm.currentSlide) {
+            elm.find('.slides > .slide--prev').addClass('js-op');
+            elm.find('.slides > .slide--active').addClass('js-oa');
+            elm.find('.slides > .slide--next').addClass('js-on');
             elm.removeClass('drag-prev drag-next');
             if (parm.loopMode === false) {
                 if (parm.currentSlide < slide) {
@@ -171,9 +174,6 @@ $.widget("ma5.ma5slider", {
                         }
                         parm.slideAll.removeClass('js-op js-oa js-on js-np js-na js-nn js-to-del');
                         elm.find('> .dots').removeClass('dots-disabled');
-                        elm.find('.slides > .slide--prev').addClass('js-op');
-                        elm.find('.slides > .slide--active').addClass('js-oa');
-                        elm.find('.slides > .slide--next').addClass('js-on');
                         elm.removeClass('disabled');
                         elm.removeClass('transition-on');
                         slide = 0;
@@ -356,11 +356,18 @@ $.widget("ma5.ma5slider", {
                 $('.ma5slider__control[data-ma5slider="#' + elm.attr('id') + '"][data-ma5slide="first"]').addClass('targeted');
             }
         } else {
+            if(slide < 1) {
+                slide = parm.slideCount;
+            } else if( slide > parm.slideCount ) {
+                slide = 1;
+            }
             if (slide == parm.slideCount) {
                 elm.trigger('ma5.lastSlide');
+                $('.ma5slider__control[data-ma5slider="#' + elm.attr('id') + '"][data-ma5slide="last"]').addClass('targeted');
             }
             if (slide == 1) {
                 elm.trigger('ma5.firstSlide');
+                $('.ma5slider__control[data-ma5slider="#' + elm.attr('id') + '"][data-ma5slide="first"]').addClass('targeted');
             }
         }
     },
@@ -448,14 +455,13 @@ $.widget("ma5.ma5slider", {
             elm.trigger('ma5.activeSlide', [parm.slideCount]);
             elm.find('> .dots .dot[data-target="' + (parm.slideCount) + '"]').addClass('active').siblings().removeClass('active');
         }
-        elm.find('.slide').removeClass('js-op js-oa js-on');
         elm.find('.slides > .slide--next').removeClass('slide--next');
-        elm.find('.slides > .slide--active').removeClass('slide--active').addClass('slide--next js-on');
-        elm.find('.slides > .slide--prev').removeClass('slide--prev').addClass('slide--active js-oa');
+        elm.find('.slides > .slide--active').removeClass('slide--active').addClass('slide--next');
+        elm.find('.slides > .slide--prev').removeClass('slide--prev').addClass('slide--active');
         if (currentSlide != 1) {
-            parm.slidePrev.prev().addClass('slide--prev js-op');
+            parm.slidePrev.prev().addClass('slide--prev');
         } else {
-            parm.slideAll.last().addClass('slide--prev js-op');
+            parm.slideAll.last().addClass('slide--prev');
         }
         slides.removeClass('dragged-prev-end dragged-next-end');
         this._ma5draggable();
@@ -477,14 +483,13 @@ $.widget("ma5.ma5slider", {
             elm.trigger('ma5.activeSlide', [1]);
             elm.find('> .dots .dot[data-target="1"]').addClass('active').siblings().removeClass('active');
         }
-        parm.slideAll.removeClass('js-op js-oa js-on');
         elm.find('.slides > .slide--prev').removeClass('slide--prev');
-        elm.find('.slides > .slide--active').removeClass('slide--active').addClass('slide--prev js-op');
-        elm.find('.slides > .slide--next').removeClass('slide--next').addClass('slide--active js-oa');
+        elm.find('.slides > .slide--active').removeClass('slide--active').addClass('slide--prev');
+        elm.find('.slides > .slide--next').removeClass('slide--next').addClass('slide--active');
         if (parm.currentSlide != slideCount) {
-            parm.slideNext.next().addClass('slide--next js-on');
+            parm.slideNext.next().addClass('slide--next');
         } else {
-            parm.slideAll.first().addClass('slide--next js-on');
+            parm.slideAll.first().addClass('slide--next');
         }
         parm.slides.removeClass('dragged-prev-end dragged-next-end');
         this._ma5draggable();
