@@ -8,7 +8,6 @@
  *   GitHub: https://github.com/ma-5/ma5slider
  *
  */
-
 $.widget("ma5.ma5slider", {
     options: {
         autoplayTime: 3000,
@@ -186,7 +185,7 @@ $.widget("ma5.ma5slider", {
                         return false;
                     }
                 });
-            }, 50);
+            }, 60);
         } else {
             if (jQuery().draggable) {
                 widgetThis._ma5draggable();
@@ -683,7 +682,3 @@ $(window).on('load', function () {
         }
     });
 });
-
-
-
-

@@ -17,7 +17,6 @@
             transform:translateX(-100%);
         }
     }
-
     .slide {
         &.transition-on {
             transition: transform .6s ease;
@@ -28,7 +27,6 @@
             transition: transform .6s ease;
         }
     }
-
     .slides {
         &.dragged-prev-end {
             position: static;
