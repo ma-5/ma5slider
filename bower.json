@@ -1,7 +1,7 @@
 {
   "name": "ma5slider",
-  "description": "jQuery UI Image slider. Ease to use, lightweight, responsive, mouse draggable, customizable by CSS classes, custom animations for each slide, JS methods and events.",
-  "version": "v1.1.3",
+  "description": "jQuery UI Image slider.",
+  "version": "v1.1.4",
   "main": [
     "./dist/css/ma5slider.css",
     "./app/js/ma5slider.js"
