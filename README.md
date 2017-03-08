@@ -306,3 +306,4 @@ $('.ma5slider').on('ma5.activeSlide', function (event, slide) {
 Prepare jQuery UI file: [Builder link](http://jqueryui.com/download/#!version=1.12.1&themeParams=none&components=101000000100100000000000010000000000000000000000)
 
 For touch action in jQuery UI you can add Touch Event Support for jQuery UI: [jQuery UI Touch Punch](http://touchpunch.furf.com/)
+
