@@ -34,10 +34,10 @@
             }
             &.dir-prev {
                 .slide--prev {
-                    transform: translateY(calc(100% - 0.5px)); //
+                    transform: translateY(calc(100% - 0.5px));
                 }
                 .slide--next {
-                    transform: translateY(calc(-100% + 0.5px)); //
+                    transform: translateY(calc(-100% + 0.5px));
                 }
             }
         }
