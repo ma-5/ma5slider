@@ -1,6 +1,6 @@
 {
   "name": "ma5slider",
-  "description": "jQuery UI Image slider.",
+  "description": "jQuery UI Image slider",
   "version": "v1.1.5",
   "main": [
     "./dist/css/ma5slider.css",
