@@ -2,7 +2,7 @@
 
 /*!
  *   MA5-Slider
- *   v 1.1.5
+ *   v 1.1.6
  *   MIT License
  *   Copyright (c) 2016 Tomasz Kalinowski
  *   http://ma5slider.ma5.pl
@@ -241,6 +241,14 @@ $.widget("ma5.ma5slider", {
             this.goToSlide(parm.slideCount);
         }
     },
+    updateCanvas: function () {
+        var elm = this.element;
+        var parm = this._parm();
+        var activeImage = elm.find('.slide--active img');
+        var newWidth = activeImage.width();
+        var newHeight = activeImage.height();
+        elm.find('.canvas').attr('width', newWidth).attr('height', newHeight);
+    },
     // private methods.
     _parm: function () {
         var elm = this.element;
@@ -431,6 +439,13 @@ $.widget("ma5.ma5slider", {
             }
             widgetThis.goToSlide(counter);
         }, tempo);
+        $("body").keydown(function (e) {
+            if (e.keyCode == 9) {
+                clearInterval(autoplay);
+                return true;
+            }
+        });
+
         elm.on('touch click', function () {
             clearInterval(autoplay);
             return true;
@@ -662,6 +677,9 @@ $(document).ready(function () {
 // Refresh for responsive
 $(window).resize(function () {
     $('.ma5slider').ma5slider('goToSlide', 'current');
+    setTimeout(function () {
+        $('.ma5slider').ma5slider('updateCanvas');
+    }, 500);
 });
 
 // External control extension
