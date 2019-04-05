@@ -3,7 +3,7 @@ jQuery Image Slider. Ease to use, lightweight, responsive, mouse draggable, cust
 
 [**Demo**](https://ma-5.github.io/ma5slider)
 
-##Quick start
+## Quick start
 
 
 **HTML in HEAD**:
