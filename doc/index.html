@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset="utf-8">
+    <title>MA5Slider</title>
+    <meta name="description" content="jQuery Image Slider. Ease to use, lightweight, responsive, mouse draggable, customizable by CSS classes, custom animations for each slide, JS methods and events. Javascript 16kB">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=1">
+    <meta name="MobileOptimized" content="width">
+    <meta name="HandheldFriendly" content="true">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <meta name="msapplication-tap-highlight" content="no">
+
+    <link href="./css/main.min.css" rel="stylesheet" type="text/css">
+    <script src="./js/run_prettify.js"></script>
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/jquery-ui.min.js"></script>
+    <script src="./js/jquery.ui.touch-punch.min.js"></script>
+    <script src="./js/functions.js"></script>
+
+    <!-- MA5 Slider-->
+    <link href="./css/ma5slider.min.css" rel="stylesheet" type="text/css">
+    <script src="./js/ma5slider.js"></script>
+
+    <script>
+        $(window).on('load', function () {
+            $('.ma5slider').ma5slider();
+        });
+    </script>
+</head>
+<body itemscope itemtype="http://schema.org/WebPage">
+<header class="site-header">
+    <nav class="navbar navbar-inverse menu--main" itemscope itemtype="http://schema.org/WebPageElement">
+    <div class="container">
+        <ul class="nav navbar-nav" itemscope itemtype="http://www.schema.org/SiteNavigationElement">
+            <li class="active"><a href="./index.html" itemprop="url"><span itemprop="name">Home</span></a></li>
+            <li><a href="./index-docs.html" itemprop="url"><span itemprop="name">Docs</span></a></li>
+            <li><a href="./index-examples.html" itemprop="url"><span itemprop="name">Examples</span></a></li>
+        </ul>
+    </div>
+</nav>
+    <div class="container">
+        <div class="hero-item">
+            <h1><a href="http://ma5slider.ma5.pl">MA5Slider <span class="sr-only">- jQuery Image Slider</span></a></h1>
+            <p class="description">Image slider</p>
+            <p class="description">Ease to use, lightweight, responsive, mouse draggable, customizable by CSS classes, custom animations for each slide, JS methods and events. Javascript 16kB</p>
+            <p><a href="https://github.com/ma-5/ma5slider" target="_blank">Github</a> v 1.1.6</p>
+        </div>
+    </div>
+</header>
+<div class="container">
+    <div id="sample-1" class="ma5slider outside-navs outside-dots anim-horizontal loop-mode">
+        <div class="slides">
+            <a href="#slide-1"><img src="./images/09.jpg" alt=""></a>
+            <a href="#slide-2"><img src="./images/01.jpg" alt=""></a>
+            <a href="#slide-3"><img src="./images/03.jpg" alt=""></a>
+            <a href="#slide-4"><img src="./images/04.jpg" alt=""></a>
+            <a href="#slide-5"><img src="./images/02.jpg" alt=""></a>
+            <a href="#slide-6"><img src="./images/05.jpg" alt=""></a>
+            <a href="#slide-7"><img src="./images/06.jpg" alt=""></a>
+            <a href="#slide-8"><img src="./images/07.jpg" alt=""></a>
+            <a href="#slide-9"><img src="./images/08.jpg" alt=""></a>
+            <a href="#slide-10"><img src="./images/10.jpg" alt=""></a>
+        </div>
+    </div>
+
+<div class="vspace">
+    <h2>Features</h2>
+    <ul>
+        <li>Mouse draggable</li>
+        <li>Responsive</li>
+        <li>Mulit-animations: horizontal, vertical and fade</li>
+        <li>Individual animation and color settings for each slide.</li>
+        <li>JS methods and events</li>
+        <li>Customizable by CSS classes</li>
+    </ul>
+
+    <br>
+    <h2>Quick start</h2>
+
+    <p>HTML in &lt;head&gt;:</p>
+    <pre class="prettyprint lang-html linenums">
+    &lt;!-- jQuery --&gt;
+    &lt;script src="./js/jquery.min.js"&gt;&lt;/script&gt;
+
+    &lt;!-- jQuery UI mouse draggable widget --&gt;
+    &lt;script src="./js/jquery-ui.min.js"&gt;&lt;/script&gt;
+
+    &lt;!-- Touch Event Support for jQuery UI --&gt;
+    &lt;script src="./js/jquery.ui.touch-punch.min.js"&gt;&lt;/script&gt;
+
+    &lt;!-- MA5 Slider --&gt;
+    &lt;link href="./css/ma5slider.min.css" rel="stylesheet" type="text/css"&gt;
+    &lt;script src="./js/ma5slider.min.js"&gt;&lt;/script&gt;
+
+    &lt;!-- Call the script --&gt;
+    &lt;script&gt;
+        $(window).on('load', function () {
+           $('.ma5slider').ma5slider();
+        });
+    &lt;/script&gt;
+    </pre>
+    <p>HTML in &lt;body&gt;:</p>
+    <pre class="prettyprint lang-html linenums">
+    &lt;div class="ma5slider outside-navs outside-dots anim-horizontal loop-mode"&gt;
+        &lt;div class="slides"&gt;
+            &lt;!-- children = slides --&gt;
+            &lt;a href="#slide-1"&gt;&lt;img src="./images/01.jpg" alt=""&gt;&lt;/a&gt;
+            &lt;a href="#slide-2"&gt;&lt;img src="./images/02.jpg" alt=""&gt;&lt;/a&gt;
+            &lt;a href="#slide-3"&gt;&lt;img src="./images/03.jpg" alt=""&gt;&lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    </pre>
+</div>
+
+</div>
+<footer class="site-footer container">
+<hr>
+    MA5 Slider has MIT License, <a href="https://github.com/ma-5/ma5slider" target="_blank">Github</a> v 1.1.6
+</footer>
+</body>
+</html>

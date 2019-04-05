@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset="utf-8">
+    <title>MA5Slider - Examples</title>
+    <meta name="description" content="jQuery Image Slider. Ease to use, lightweight, responsive, mouse draggable, customizable by CSS classes, custom animations for each slide, JS methods and events. Javascript 16kB">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=1">
+    <meta name="MobileOptimized" content="width">
+    <meta name="HandheldFriendly" content="true">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <meta name="msapplication-tap-highlight" content="no">
+
+    <link href="./css/main.min.css" rel="stylesheet" type="text/css">
+    <script src="./js/run_prettify.js"></script>
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/jquery-ui.min.js"></script>
+    <script src="./js/jquery.ui.touch-punch.min.js"></script>
+    <script src="./js/functions.js"></script>
+
+    <!-- MA5 Slider-->
+    <link href="./css/ma5slider.min.css" rel="stylesheet" type="text/css">
+    <script src="./js/ma5slider.min.js"></script>
+
+    <script>
+        $(window).on('load', function () {
+            $('.ma5slider').ma5slider();
+            // Methods
+            $('#example-34').ma5slider('goToSlide', 3);
+            // Calls
+            $('#example-34').on('ma5.animationStart', function () {
+                console.log('event animationStart');
+            });
+            $('#example-34').on('ma5.animationEnd', function () {
+                console.log('event animationEnd');
+            });
+            $('#example-34').on('ma5.firstSlide', function () {
+                console.log('event firstSlide');
+            });
+            $('#example-34').on('ma5.lastSlide', function () {
+                console.log('event lastSlide');
+            });
+            $('#example-34').on('ma5.activeSlide', function (event, slide) {
+                console.log( 'event activeSlide: ' + slide );
+            });
+        });
+    </script>
+</head>
+<body itemscope itemtype="http://schema.org/WebPage">
+<header class="site-header">
+    <nav class="navbar navbar-inverse menu--main" itemscope itemtype="http://schema.org/WebPageElement">
+    <div class="container">
+        <ul class="nav navbar-nav" itemscope itemtype="http://www.schema.org/SiteNavigationElement">
+            <li><a href="./index.html" itemprop="url"><span itemprop="name">Home</span></a></li>
+            <li><a href="./index-docs.html" itemprop="url"><span itemprop="name">Docs</span></a></li>
+            <li class="active"><a href="./index-examples.html" itemprop="url"><span itemprop="name">Examples</span></a></li>
+        </ul>
+    </div>
+</nav>
+    <div class="container">
+        <div class="hero-item">
+            <h1><a href="http://ma5slider.ma5.pl">MA5Slider <span class="sr-only">- jQuery Image Slider</span></a></h1>
+            <p class="description">Image slider</p>
+            <p class="description">Ease to use, lightweight, responsive, mouse draggable, customizable by CSS classes, custom animations for each slide, JS methods and events. Javascript 16kB</p>
+            <p><a href="https://github.com/ma-5/ma5slider" target="_blank">Github</a> v 1.1.6</p>
+        </div>
+    </div>
+</header>
+<div class="container">
+
+    <h2>Autoplay module</h2>
+    <h4><span class="parameter">autoplay</span> auto play slider</h4>
+    <p>Note: Some navigation action stop autoplay.</p>
+<pre class="prettyprint lang-html nomargin">
+&lt;div id="example-25" class="ma5slider hover-navs hover-dots anim-horizontal inside-dots center-dots inside-navs autoplay" data-tempo="3500"&gt;
+</pre>
+    <div id="example-25" class="ma5slider hover-navs hover-dots anim-horizontal outside-dots center-dots inside-navs loop-mode autoplay" data-tempo="3500">
+        <div class="slides">
+            <a href="#slide-1"><img src="./images/09.jpg" alt=""></a>
+            <a href="#slide-10"><img src="./images/10.jpg" alt=""></a>
+            <a href="#slide-2" data-ma5-anim="anim-vertical"><img src="./images/01.jpg" alt=""></a>
+            <a href="#slide-3" data-ma5-anim="anim-fade"><img src="./images/03.jpg" alt=""></a>
+            <a href="#slide-4"><img src="./images/04.jpg" alt=""></a>
+            <a href="#slide-5" data-ma5-anim="anim-vertical"><img src="./images/02.jpg" alt=""></a>
+            <a href="#slide-6" data-ma5-anim="anim-fade"><img src="./images/05.jpg" alt=""></a>
+            <a href="#slide-7"><img src="./images/06.jpg" alt=""></a>
+            <a href="#slide-8" data-ma5-anim="anim-vertical"><img src="./images/07.jpg" alt=""></a>
+            <a href="#slide-9" data-ma5-anim="anim-fade"><img src="./images/08.jpg" alt=""></a>
+
+        </div>
+    </div>
+</div>
+<footer class="site-footer container">
+<hr>
+    MA5 Slider has MIT License, <a href="https://github.com/ma-5/ma5slider" target="_blank">Github</a> v 1.1.6
+</footer>
+</body>
+</html>

@@ -1,0 +1,532 @@
+
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset="utf-8">
+    <title>MA5Slider - Docs</title>
+    <meta name="description" content="jQuery Image Slider. Ease to use, lightweight, responsive, mouse draggable, customizable by CSS classes, custom animations for each slide, JS methods and events. Javascript 16kB">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=1">
+    <meta name="MobileOptimized" content="width">
+    <meta name="HandheldFriendly" content="true">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <meta name="msapplication-tap-highlight" content="no">
+
+    <link href="./css/main.min.css" rel="stylesheet" type="text/css">
+    <script src="./js/run_prettify.js"></script>
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/jquery-ui.min.js"></script>
+    <script src="./js/jquery.ui.touch-punch.min.js"></script>
+    <script src="./js/functions.js"></script>
+
+    <!-- MA5 Slider-->
+    <link href="./css/ma5slider.min.css" rel="stylesheet" type="text/css">
+    <script src="./js/ma5slider.min.js"></script>
+
+    <script>
+        $(window).on('load', function () {
+            $('.ma5slider').ma5slider();
+        });
+    </script>
+
+</head>
+<body itemscope itemtype="http://schema.org/WebPage">
+<header class="site-header">
+    <nav class="navbar navbar-inverse menu--main" itemscope itemtype="http://schema.org/WebPageElement">
+    <div class="container">
+        <ul class="nav navbar-nav" itemscope itemtype="http://www.schema.org/SiteNavigationElement">
+            <li><a href="./index.html" itemprop="url"><span itemprop="name">Home</span></a></li>
+            <li class="active"><a href="./index-docs.html" itemprop="url"><span itemprop="name">Docs</span></a></li>
+            <li><a href="./index-examples.html" itemprop="url"><span itemprop="name">Examples</span></a></li>
+        </ul>
+    </div>
+</nav>
+    <div class="container">
+        <div class="hero-item">
+            <h1><a href="http://ma5slider.ma5.pl">MA5Slider <span class="sr-only">- jQuery Image Slider</span></a></h1>
+            <p class="description">Image slider</p>
+            <p class="description">Ease to use, lightweight, responsive, mouse draggable, customizable by CSS classes, custom animations for each slide, JS methods and events. Javascript 16kB</p>
+            <p><a href="https://github.com/ma-5/ma5slider" target="_blank">Github</a> v 1.1.6</p>
+        </div>
+    </div>
+</header>
+<div class="container">
+
+
+
+
+
+    <h2>Customize</h2>
+    <p>You can use a <b>CSS classes</b> next to <b>ma5slider</b> to the final appearance.</p>
+    <pre class="prettyprint lang-html">
+&lt;div id="example..." class="ma5slider anim-horizontal top-dots outside-navs ..."&gt;
+</pre>
+    <p><b>Tip:</b> Slider without CSS classes for dots hides dots. Slider without CSS classes for arrows hides arrows.</p>
+    <p><b>Rule:</b> Use <b>ID</b> for each slider.</p>
+    <p><b>Rule:</b> You can choose <b>only one parameter</b> of each module.</p>
+
+    <br>
+    <p><b>1. Slide animation module</b></p>
+    <div class="table-responsive">
+        <table class="table table-condensed table-bordered">
+            <tr>
+                <th>Class name</th>
+                <th>Description</th>
+                <th>Example page</th>
+            </tr>
+            <tr>
+                <td>anim-horizontal<span class="legend">   default</span></td>
+                <td>
+                    Slides animated horizontally.
+                </td>
+                <td>
+                    <a class="btn btn-primary btn-xs" href="./index-examples.html#anim-horizontal">Example</a>
+                </td>
+            </tr>
+            <tr>
+                <td>anim-vertical</td>
+                <td>
+                    Slides animated vertically.
+                </td>
+                <td>
+                    <a class="btn btn-primary btn-xs" href="./index-examples.html#anim-vertical">Example</a>
+                </td>
+            </tr>
+            <tr>
+                <td>anim-fade</td>
+                <td>
+                    Slides animated by fade effect.
+                </td>
+                <td>
+                    <a class="btn btn-primary btn-xs" href="./index-examples.html#anim-fade">Example</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <p><b>2. Arrows direction module</b></p>
+    <div class="table-responsive">
+        <table class="table table-condensed table-bordered">
+            <tr>
+                <th>Class name</th>
+                <th>Description</th>
+                <th>Example page</th>
+            </tr>
+            <tr>
+                <td>horizontal-navs<span class="legend">   default</span></td>
+                <td>
+                    Arrows left and right.
+                </td>
+                <td>
+                    <a class="btn btn-primary btn-xs" href="./index-examples.html#horizontal-navs">Example</a>
+                </td>
+            </tr>
+            <tr>
+                <td>vertical-navs</td>
+                <td>
+                    Arrows top and bottom.
+                </td>
+                <td>
+                    <a class="btn btn-primary btn-xs" href="./index-examples.html#vertical-navs">Example</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <p><b>3. Nesting arrows module</b></p>
+    <div class="table-responsive">
+        <table class="table table-condensed table-bordered">
+            <tr>
+                <th>Class name</th>
+                <th>Description</th>
+                <th>Example page</th>
+            </tr>
+            <tr>
+                <td>inside-navs<span class="legend">   default</span></td>
+                <td>
+                    Arrows inside.
+                </td>
+                <td>
+                    <a class="btn btn-primary btn-xs" href="./index-examples.html#inside-navs">Example</a>
+                </td>
+            </tr>
+            <tr>
+                <td>outside-navs</td>
+                <td>
+                    Arrows outside.
+                </td>
+                <td>
+                    <a class="btn btn-primary btn-xs" href="./index-examples.html#outside-navs">Example</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <p><b>4. Dots direction module</b></p>
+    <div class="table-responsive">
+        <table class="table table-condensed table-bordered">
+            <tr>
+                <th>Class name</th>
+                <th>Description</th>
+                <th>Example page</th>
+            </tr>
+            <tr>
+                <td>horizontal-dots<span class="legend">   default</span></td>
+                <td>
+                    Dots placed horizontally. You can add additional align parameters:<br>
+                    <b>center-dots</b><span class="legend"> default</span>, <b>left-dots</b>, <b>right-dots</b>
+                </td>
+                <td>
+                    <a class="btn btn-primary btn-xs" href="./index-examples.html#horizontal-dots">Example</a>
+                </td>
+            </tr>
+            <tr>
+                <td>vertical-dots</td>
+                <td>
+                    Dots placed vertically. You can add additional align parameters:<br>
+                    <b>middle-dots</b><span class="legend"> default</span>, <b>top-dots</b>, <b>bottom-dots</b>
+                </td>
+                <td>
+                    <a class="btn btn-primary btn-xs" href="./index-examples.html#vertical-dots">Example</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+
+    <p><b>5. Dots ordering module</b></p>
+    <div class="table-responsive">
+        <table class="table table-condensed table-bordered">
+            <tr>
+                <th>Class name</th>
+                <th>Description</th>
+                <th>Example page</th>
+            </tr>
+            <tr>
+                <td>bottom-dots<span class="legend">   default</span></td>
+                <td>
+                    Dots placed after slides.
+                </td>
+                <td>
+                    <a class="btn btn-primary btn-xs" href="./index-examples.html#bottom-dots">Example</a>
+                </td>
+            </tr>
+            <tr>
+                <td>top-dots</td>
+                <td>
+                    Dots placed before slides.
+                </td>
+                <td>
+                    <a class="btn btn-primary btn-xs" href="./index-examples.html#top-dots">Example</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <p><b>6. Nesting dots module</b></p>
+    <div class="table-responsive">
+        <table class="table table-condensed table-bordered">
+            <tr>
+                <th>Class name</th>
+                <th>Description</th>
+                <th>Example page</th>
+            </tr>
+
+            <tr>
+                <td>outside-dots<span class="legend">   default</span></td>
+                <td>
+                    Dots outside.
+                </td>
+                <td>
+                    <a class="btn btn-primary btn-xs" href="./index-examples.html#outside-dots">Example</a>
+                </td>
+            </tr>
+            <tr>
+                <td>inside-dots</td>
+                <td>
+                    Dots inside.
+                </td>
+                <td>
+                    <a class="btn btn-primary btn-xs" href="./index-examples.html#inside-dots">Example</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <p><b>7. Navs hover module</b></p>
+    <div class="table-responsive">
+        <table class="table table-condensed table-bordered">
+            <tr>
+                <th>Class name</th>
+                <th>Description</th>
+                <th>Example page</th>
+            </tr>
+            <tr>
+                <td>hover-navs</td>
+                <td>
+                    Show arrows at hover
+                </td>
+                <td>
+                    <a class="btn btn-primary btn-xs" href="./index-examples.html#hover-navs">Example</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <p><b>8. Dots hover module</b></p>
+    <div class="table-responsive">
+        <table class="table table-condensed table-bordered">
+            <tr>
+                <th>Class name</th>
+                <th>Description</th>
+                <th>Example page</th>
+            </tr>
+            <tr>
+                <td>hover-dots</td>
+                <td>
+                    Show dots at hover
+                </td>
+                <td>
+                    <a class="btn btn-primary btn-xs" href="./index-examples.html#hover-dots">Example</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+
+
+    <p><b>9. Loop module</b></p>
+    <div class="table-responsive">
+        <table class="table table-condensed table-bordered">
+            <tr>
+                <th>Class name</th>
+                <th>Description</th>
+                <th>Example page</th>
+            </tr>
+            <tr>
+                <td>loop-mode</td>
+                <td>
+                    Enable loop for slides
+                </td>
+                <td>
+                    <a class="btn btn-primary btn-xs" href="./index-examples.html#loop-mode">Example</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <p><b>10. Dots visibility module</b></p>
+    <div class="table-responsive">
+        <table class="table table-condensed table-bordered">
+            <tr>
+                <th>Class name</th>
+                <th>Description</th>
+                <th>Example page</th>
+            </tr>
+            <tr>
+                <td>hidden-dots</td>
+                <td>
+                    Hide dots
+                </td>
+                <td>
+                    <a class="btn btn-primary btn-xs" href="./index-examples.html#hidden-dots">Example</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <p><b>11. Navs visibility module</b></p>
+    <div class="table-responsive">
+        <table class="table table-condensed table-bordered">
+            <tr>
+                <th>Class name</th>
+                <th>Description</th>
+                <th>Example page</th>
+            </tr>
+            <tr>
+                <td>hidden-navs</td>
+                <td>
+                    Hide navs
+                </td>
+                <td>
+                    <a class="btn btn-primary btn-xs" href="./index-examples.html#hidden-navs">Example</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+<br>
+    <h2>Overwrite global settings by specific slide settings</h2>
+    <p>Global settings can be overwrite by attributess added to specific slide.</p>
+    <br>
+    <p><b>1. Overwrite dots color</b></p>
+
+    <div class="table-responsive">
+        <table class="table table-condensed table-bordered">
+            <tr>
+                <th>Attribute name</th>
+                <th>Description</th>
+                <th>Example page</th>
+            </tr>
+            <tr>
+                <td>data-ma5-dot, <br>data-ma5-dot-active</td>
+                <td>
+                    Overwrite dots colors for specific slide.
+                </td>
+                <td>
+                    <a class="btn btn-primary btn-xs" href="./index-examples.html#data-ma5-dot">Example</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <p><b>2. Overwrite navs color</b></p>
+
+    <div class="table-responsive">
+        <table class="table table-condensed table-bordered">
+            <tr>
+                <th>Attribute name</th>
+                <th>Description</th>
+                <th>Example page</th>
+            </tr>
+            <tr>
+                <td>data-ma5-nav</td>
+                <td>
+                    Overwrite nav colors for specific slide.
+                </td>
+                <td>
+                    <a class="btn btn-primary btn-xs" href="./index-examples.html#data-ma5-nav">Example</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <p><b>3. Overwrite animation</b></p>
+<p>Note: During mouse drag animation is always horizontal.</p>
+    <div class="table-responsive">
+        <table class="table table-condensed table-bordered">
+            <tr>
+                <th>Attribute name</th>
+                <th>Description</th>
+                <th>Example page</th>
+            </tr>
+            <tr>
+                <td>data-ma5-anim</td>
+                <td>
+                    Overwrite animation for specific slide.
+                </td>
+                <td>
+                    <a class="btn btn-primary btn-xs" href="./index-examples.html#data-ma5-anim">Example</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+<br>
+    <h2>HTML control</h2>
+    <p>External control elements for the slider.</p>
+
+
+    <pre class="prettyprint lang-html">
+&lt;a class="ma5slider__control" href="#slide.." data-ma5slider="#example-33" data-ma5slide="4"&gt;Go to slide 4&lt;/a&gt;
+&lt;a class="ma5slider__control" href="#slide.." data-ma5slider="#example-33" data-ma5slide="first"&gt;First slide&lt;/a&gt;
+&lt;a class="ma5slider__control" href="#slide.." data-ma5slider="#example-33" data-ma5slide="previous"&gt;Previous slide&lt;/a&gt;
+&lt;a class="ma5slider__control" href="#slide.." data-ma5slider="#example-33" data-ma5slide="next"&gt;Next slide&lt;/a&gt;
+&lt;a class="ma5slider__control" href="#slide.." data-ma5slider="#example-33" data-ma5slide="last"&gt;Last slide&lt;/a&gt;
+</pre>
+
+    <a class="btn btn-primary" href="./index-examples.html#ma5slider__control">Example</a>
+
+    <br><br><br>
+
+    <h2>Public methods</h2>
+
+<pre class="prettyprint lang-js">
+    // Go to previous slide
+    $('.ma5slider').ma5slider('goToPrev');
+
+    // Go to next slide
+    $('.ma5slider').ma5slider('goToNext');
+
+    // Go to first slide
+    $('.ma5slider').ma5slider('goToFirst');
+
+    // Go to last slide
+    $('.ma5slider').ma5slider('goToLast');
+
+    // Go to 3 slide
+    $('.ma5slider').ma5slider('goToSlide', 3);
+</pre>
+    <br><br>
+    <h2>Events</h2>
+<pre class="prettyprint lang-js">
+    // Slide animation start
+    $('.ma5slider').on('ma5.animationStart', function () {
+        console.log('event animationStart');
+    });
+
+    // Slide animation end
+    $('.ma5slider').on('ma5.animationEnd', function () {
+        console.log('event animationEnd');
+    });
+
+    // On first slide
+    $('.ma5slider').on('ma5.firstSlide', function () {
+        console.log('event firstSlide');
+    });
+
+    // On last slide
+    $('.ma5slider').on('ma5.lastSlide', function () {
+        console.log('event lastSlide');
+    });
+
+    // Return active slide number
+    $('.ma5slider').on('ma5.activeSlide', function (event, slide) {
+        console.log( 'event activeSlide: ' + slide );
+    });
+</pre>
+
+
+
+    <a class="btn btn-primary" href="./index-examples.html#script-control-slide-number">Example</a>
+
+    <br><br><br>
+    <br id="draggable">
+    <h2>Mouse Draggable Extension</h2>
+    <p><a href="http://jqueryui.com" target="_blank">jQuery UI</a> with "draggable" turns on slider mouse drag action.</p>
+
+    <p>Prepare jQuery UI file: <a href="http://jqueryui.com/download/#!version=1.12.1&themeParams=none&components=101000000100100000000000010000000000000000000000" target="_blank">Builder link</a></p>
+
+    <p>For touch action in jQuery UI you can add Touch Event Support for jQuery UI: <a href="http://touchpunch.furf.com/" target="_blank">jQuery UI Touch Punch</a></p>
+
+    <br><br>
+
+
+
+    <h2>Autoplay module</h2>
+
+    <div class="table-responsive">
+        <table class="table table-condensed table-bordered">
+            <tr>
+                <th>Class name</th>
+                <th>Description</th>
+                <th>Example page</th>
+            </tr>
+            <tr>
+                <td>autoplay</td>
+                <td>
+                    Auto play slider. Set tempo by data-tempo attribute. For 1500ms: <b>data-tempo="1500"</b>
+                </td>
+                <td>
+                    <a class="btn btn-primary btn-xs" href="./index-autoplay.html">Example</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+</div>
+<footer class="site-footer container">
+<hr>
+    MA5 Slider has MIT License, <a href="https://github.com/ma-5/ma5slider" target="_blank">Github</a> v 1.1.6
+</footer>
+</body>
+</html>

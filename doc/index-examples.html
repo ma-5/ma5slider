@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset="utf-8">
+    <title>MA5Slider - Examples</title>
+    <meta name="description" content="jQuery Image Slider. Ease to use, lightweight, responsive, mouse draggable, customizable by CSS classes, custom animations for each slide, JS methods and events. Javascript 16kB">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=1">
+    <meta name="MobileOptimized" content="width">
+    <meta name="HandheldFriendly" content="true">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <meta name="msapplication-tap-highlight" content="no">
+
+    <link href="./css/main.min.css" rel="stylesheet" type="text/css">
+    <script src="./js/run_prettify.js"></script>
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/jquery-ui.min.js"></script>
+    <script src="./js/jquery.ui.touch-punch.min.js"></script>
+    <script src="./js/functions.js"></script>
+
+    <!-- MA5 Slider-->
+    <link href="./css/ma5slider.min.css" rel="stylesheet" type="text/css">
+    <script src="./js/ma5slider.min.js"></script>
+
+    <script>
+        $(window).on('load', function () {
+            $('.ma5slider').ma5slider();
+            // Methods
+            $('#example-34').ma5slider('goToSlide', 3);
+            // Calls
+            $('#example-34').on('ma5.animationStart', function () {
+                console.log('event animationStart');
+            });
+            $('#example-34').on('ma5.animationEnd', function () {
+                console.log('event animationEnd');
+            });
+            $('#example-34').on('ma5.firstSlide', function () {
+                console.log('event firstSlide');
+            });
+            $('#example-34').on('ma5.lastSlide', function () {
+                console.log('event lastSlide');
+            });
+            $('#example-34').on('ma5.activeSlide', function (event, slide) {
+                console.log( 'event activeSlide: ' + slide );
+            });
+        });
+    </script>
+</head>
+<body itemscope itemtype="http://schema.org/WebPage">
+<header class="site-header">
+    <nav class="navbar navbar-inverse menu--main" itemscope itemtype="http://schema.org/WebPageElement">
+    <div class="container">
+        <ul class="nav navbar-nav" itemscope itemtype="http://www.schema.org/SiteNavigationElement">
+            <li><a href="./index.html" itemprop="url"><span itemprop="name">Home</span></a></li>
+            <li><a href="./index-docs.html" itemprop="url"><span itemprop="name">Docs</span></a></li>
+            <li class="active"><a href="./index-examples.html" itemprop="url"><span itemprop="name">Examples</span></a></li>
+        </ul>
+    </div>
+</nav>
+    <div class="container">
+        <div class="hero-item">
+            <h1><a href="http://ma5slider.ma5.pl">MA5Slider <span class="sr-only">- jQuery Image Slider</span></a></h1>
+            <p class="description">Image slider</p>
+            <p class="description">Ease to use, lightweight, responsive, mouse draggable, customizable by CSS classes, custom animations for each slide, JS methods and events. Javascript 16kB</p>
+            <p><a href="https://github.com/ma-5/ma5slider" target="_blank">Github</a> v 1.1.6</p>
+        </div>
+    </div>
+</header>
+<div class="container">
+
+    <br id="examples">
+    <h2>Examples</h2>
+    <br id="anim-horizontal">
+
+    <h3>1. Slide animation module</h3>
+
+    <h4 class="vspace"><span class="parameter">anim-horizontal</span> Slides animated horizontally</h4>
+<pre class="prettyprint lang-html nomargin vspace">
+&lt;div id="example-01" class="ma5slider anim-horizontal outside-navs outside-dots horizontal-navs horizontal-dots"&gt;
+</pre>
+    <div id="example-01" class="ma5slider anim-horizontal outside-navs outside-dots horizontal-navs horizontal-dots">
+        <div class="slides">
+            <a href="#slide-1"><img src="./images/09.jpg" alt=""></a>
+            <a href="#slide-2"><img src="./images/01.jpg" alt=""></a>
+            <a href="#slide-3"><img src="./images/03.jpg" alt=""></a>
+        </div>
+    </div>
+
+
+    <br id="anim-vertical">
+    <h4 class="vspace"><span class="parameter">anim-vertical</span> Slides animated vertically</h4>
+<pre class="prettyprint lang-html nomargin vspace">
+&lt;div id="example-02" class="ma5slider anim-vertical outside-navs outside-dots horizontal-navs horizontal-dots"&gt;
+</pre>
+    <div id="example-02" class="ma5slider anim-vertical outside-navs outside-dots horizontal-navs horizontal-dots loop-mode">
+        <div class="slides">
+            <a href="#slide-1"><img src="./images/01.jpg" alt=""></a>
+            <a href="#slide-2"><img src="./images/03.jpg" alt=""></a>
+            <a href="#slide-3"><img src="./images/04.jpg" alt=""></a>
+        </div>
+    </div>
+
+
+    <br id="anim-fade">
+    <h4 class="vspace"><span class="parameter">anim-fade</span> Slides animated by fade effect</h4>
+    <p class="vspace">Note: During mouse drag animation is always horizontal.</p>
+<pre class="prettyprint lang-html nomargin vspace">
+&lt;div id="example-03" class="ma5slider outside-navs outside-dots horizontal-navs horizontal-dots anim-fade"&gt;
+</pre>
+    <div id="example-03" class="ma5slider outside-navs outside-dots horizontal-navs horizontal-dots anim-fade">
+        <div class="slides">
+            <a href="#slide-1"><img src="./images/03.jpg" alt=""></a>
+            <a href="#slide-2"><img src="./images/04.jpg" alt=""></a>
+            <a href="#slide-3"><img src="./images/02.jpg" alt=""></a>
+        </div>
+    </div>
+
+
+    <hr>
+    <h3>2. Arrows direction module</h3>
+
+
+    <br id="horizontal-navs">
+    <h4><span class="parameter">horizontal-navs</span> Arrows left and right</h4>
+<pre class="prettyprint lang-html nomargin">
+&lt;div id="example-04" class="ma5slider anim-horizontal horizontal-navs"&gt;
+</pre>
+    <div id="example-04" class="ma5slider anim-horizontal horizontal-navs">
+        <div class="slides">
+            <a href="#slide-1"><img src="./images/04.jpg" alt=""></a>
+            <a href="#slide-2"><img src="./images/02.jpg" alt=""></a>
+            <a href="#slide-3"><img src="./images/05.jpg" alt=""></a>
+        </div>
+    </div>
+
+
+    <br id="vertical-navs">
+    <h4><span class="parameter">vertical-navs</span> Arrows top and bottom</h4>
+<pre class="prettyprint lang-html nomargin">
+&lt;div id="example-05" class="ma5slider anim-vertical vertical-navs"&gt;
+</pre>
+    <div id="example-05" class="ma5slider anim-vertical vertical-navs">
+        <div class="slides">
+            <a href="#slide-1"><img src="./images/02.jpg" alt=""></a>
+            <a href="#slide-2"><img src="./images/05.jpg" alt=""></a>
+            <a href="#slide-3"><img src="./images/06.jpg" alt=""></a>
+        </div>
+    </div>
+
+    <hr>
+    <h3>3. Nesting arrows module</h3>
+
+
+    <br id="inside-navs">
+    <h4><span class="parameter">inside-navs</span> Arrows inside</h4>
+    <p>#1 - inside horizontally</p>
+<pre class="prettyprint lang-html nomargin">
+&lt;div id="example-06" class="ma5slider anim-horizontal horizontal-navs inside-navs"&gt;
+</pre>
+    <div id="example-06" class="ma5slider anim-horizontal horizontal-navs inside-navs">
+        <div class="slides">
+            <a href="#slide-1"><img src="./images/06.jpg" alt=""></a>
+            <a href="#slide-2"><img src="./images/07.jpg" alt=""></a>
+            <a href="#slide-3"><img src="./images/08.jpg" alt=""></a>
+        </div>
+    </div>
+    <p>#2 - inside vertically</p>
+<pre class="prettyprint lang-html nomargin">
+&lt;div id="example-07" class="ma5slider anim-vertical vertical-navs inside-navs"&gt;
+</pre>
+    <div id="example-07" class="ma5slider anim-vertical vertical-navs inside-navs">
+        <div class="slides">
+            <a href="#slide-1"><img src="./images/07.jpg" alt=""></a>
+            <a href="#slide-2"><img src="./images/08.jpg" alt=""></a>
+            <a href="#slide-3"><img src="./images/10.jpg" alt=""></a>
+        </div>
+    </div>
+
+
+    <br id="outside-navs">
+    <h4 class="vspace"><span class="parameter">outside-navs</span> Arrows outside</h4>
+    <p class="vspace">#1 - outside horizontally</p>
+<pre class="prettyprint lang-html nomargin vspace">
+&lt;div id="example-08" class="ma5slider anim-horizontal horizontal-navs outside-navs"&gt;
+</pre>
+    <div id="example-08" class="ma5slider anim-horizontal horizontal-navs outside-navs">
+        <div class="slides">
+            <a href="#slide-1"><img src="./images/08.jpg" alt=""></a>
+            <a href="#slide-2"><img src="./images/10.jpg" alt=""></a>
+            <a href="#slide-3"><img src="./images/09.jpg" alt=""></a>
+        </div>
+    </div>
+    <p>#2 - outside vertically</p>
+<pre class="prettyprint lang-html">
+&lt;div id="example-09" class="ma5slider anim-vertical vertical-navs outside-navs"&gt;
+</pre>
+    <div id="example-09" class="ma5slider anim-vertical vertical-navs outside-navs">
+        <div class="slides">
+            <a href="#slide-1"><img src="./images/10.jpg" alt=""></a>
+            <a href="#slide-2"><img src="./images/09.jpg" alt=""></a>
+            <a href="#slide-3"><img src="./images/01.jpg" alt=""></a>
+        </div>
+    </div>
+
+    <hr>
+    <h3>4. Dots direction module</h3>
+
+
+    <br id="horizontal-dots">
+    <h4><span class="parameter">horizontal-dots</span> Dots placed horizontally</h4>
+    <p>You can add additional align parameters: <b>left-dots</b>, <b>right-dots</b>, <b>center-dots</b>.</p>
+
+    <p>#1 - dots centered</p>
+<pre class="prettyprint lang-html nomargin">
+&lt;div id="example-10" class="ma5slider horizontal-dots center-dots"&gt;
+</pre>
+    <div id="example-10" class="ma5slider horizontal-dots center-dots">
+        <div class="slides">
+            <a href="#slide-1"><img src="./images/09.jpg" alt=""></a>
+            <a href="#slide-2"><img src="./images/01.jpg" alt=""></a>
+            <a href="#slide-3"><img src="./images/03.jpg" alt=""></a>
+        </div>
+    </div>
+
+    <p>#2 - dots left</p>
+    <pre class="prettyprint lang-html nomargin">
+&lt;div id="example-11" class="ma5slider horizontal-dots left-dots"&gt;
+</pre>
+    <div id="example-11" class="ma5slider horizontal-dots left-dots">
+        <div class="slides">
+            <a href="#slide-1"><img src="./images/01.jpg" alt=""></a>
+            <a href="#slide-2"><img src="./images/03.jpg" alt=""></a>
+            <a href="#slide-3"><img src="./images/04.jpg" alt=""></a>
+        </div>
+    </div>
+
+    <p>#3 - dots right</p>
+    <pre class="prettyprint lang-html nomargin">
+&lt;div id="example-12" class="ma5slider horizontal-dots right-dots"&gt;
+</pre>
+    <div id="example-12" class="ma5slider horizontal-dots right-dots">
+        <div class="slides">
+            <a href="#slide-1"><img src="./images/03.jpg" alt=""></a>
+            <a href="#slide-2"><img src="./images/04.jpg" alt=""></a>
+            <a href="#slide-3"><img src="./images/02.jpg" alt=""></a>
+        </div>
+    </div>
+
+
+    <br id="vertical-dots">
+    <h4><span class="parameter">vertical-dots</span> Dots placed vertically</h4>
+    <p>You can add additional align parameters: <b>top-dots</b>, <b>bottom-dots</b>, <b>middle-dots</b>, <b>left-dots</b>, <b>right-dots</b>.</p>
+    <br>
+
+    <p>#1 - middle-dots</p>
+<pre class="prettyprint lang-html nomargin rspace">
+&lt;div id="example-13" class="ma5slider anim-vertical vertical-navs vertical-dots middle-dots"&gt;
+</pre>
+    <div id="example-13" class="ma5slider anim-vertical vertical-navs vertical-dots middle-dots">
+        <div class="slides">
+            <a href="#slide-1"><img src="./images/04.jpg" alt=""></a>
+            <a href="#slide-2"><img src="./images/02.jpg" alt=""></a>
+            <a href="#slide-3"><img src="./images/05.jpg" alt=""></a>
+        </div>
+    </div>
+
+    <p>#2 - bottom-dots</p>
+<pre class="prettyprint lang-html nomargin rspace">
+&lt;div id="example-14" class="ma5slider anim-vertical vertical-navs vertical-dots bottom-dots"&gt;
+</pre>
+    <div id="example-14" class="ma5slider anim-vertical vertical-navs vertical-dots bottom-dots">
+        <div class="slides">
+            <a href="#slide-1"><img src="./images/02.jpg" alt=""></a>
+            <a href="#slide-2"><img src="./images/05.jpg" alt=""></a>
+            <a href="#slide-3"><img src="./images/06.jpg" alt=""></a>
+        </div>
+    </div>
+
+    <p>#3 - top-dots</p>
+<pre class="prettyprint lang-html nomargin rspace">
+&lt;div id="example-15" class="ma5slider anim-vertical vertical-navs vertical-dots top-dots"&gt;
+</pre>
+    <div id="example-15" class="ma5slider anim-vertical vertical-navs vertical-dots top-dots">
+        <div class="slides">
+            <a href="#slide-1"><img src="./images/05.jpg" alt=""></a>
+            <a href="#slide-2"><img src="./images/06.jpg" alt=""></a>
+            <a href="#slide-3"><img src="./images/07.jpg" alt=""></a>
+        </div>
+    </div>
+
+    <p class="lspace">#4 - left-dots</p>
+    <pre class="prettyprint lang-html nomargin lspace">
+&lt;div id="example-16" class="ma5slider anim-vertical vertical-navs vertical-dots middle-dots left-dots"&gt;
+</pre>
+    <div id="example-16" class="ma5slider anim-vertical vertical-navs vertical-dots middle-dots left-dots">
+        <div class="slides">
+            <a href="#slide-1"><img src="./images/06.jpg" alt=""></a>
+            <a href="#slide-2"><img src="./images/07.jpg" alt=""></a>
+            <a href="#slide-3"><img src="./images/08.jpg" alt=""></a>
+        </div>
+    </div>
+
+
+    <hr>
+    <h3>5. Dots ordering module</h3>
+
+    <br id="top-dots">
+    <h4><span class="parameter">top-dots</span> Dots placed before slides</h4>
+
+    <pre class="prettyprint lang-html">
+&lt;div id="example-17" class="ma5slider horizontal-dots center-dots top-dots"&gt;
+</pre>
+    <div id="example-17" class="ma5slider horizontal-dots center-dots top-dots">
+        <div class="slides">
+            <a href="#slide-1"><img src="./images/07.jpg" alt=""></a>
+            <a href="#slide-2"><img src="./images/08.jpg" alt=""></a>
+            <a href="#slide-3"><img src="./images/10.jpg" alt=""></a>
+        </div>
+    </div>
+
+
+
+    <br id="bottom-dots">
+    <h4><span class="parameter">bottom-dots</span> Dots placed after slides</h4>
+
+<pre class="prettyprint lang-html nomargin">
+&lt;div id="example-18" class="ma5slider horizontal-dots center-dots bottom-dots"&gt;
+</pre>
+    <div id="example-18" class="ma5slider horizontal-dots center-dots bottom-dots">
+        <div class="slides">
+            <a href="#slide-1"><img src="./images/08.jpg" alt=""></a>
+            <a href="#slide-2"><img src="./images/10.jpg" alt=""></a>
+            <a href="#slide-3"><img src="./images/09.jpg" alt=""></a>
+        </div>
+    </div>
+
+    <hr>
+
+    <h3>6. Nesting dots module</h3>
+
+
+    <br id="inside-dots">
+    <h4><span class="parameter">inside-dots</span> Dots inside</h4>
+    <p>#1 - horizontal dots inside</p>
+    <pre class="prettyprint lang-html nomargin">
+&lt;div id="example-19" class="ma5slider anim-horizontal horizontal-dots horizontal-navs center-dots inside-dots"&gt;
+</pre>
+    <div id="example-19" class="ma5slider anim-horizontal horizontal-dots horizontal-navs center-dots inside-dots">
+        <div class="slides">
+            <a href="#slide-1"><img src="./images/10.jpg" alt=""></a>
+            <a href="#slide-2"><img src="./images/09.jpg" alt=""></a>
+            <a href="#slide-3"><img src="./images/01.jpg" alt=""></a>
+        </div>
+    </div>
+
+    <p>#2 - vertical dots inside</p>
+    <pre class="prettyprint lang-html nomargin">
+&lt;div id="example-20" class="ma5slider anim-vertical vertical-dots vertical-navs center-dots inside-dots"&gt;
+</pre>
+    <div id="example-20" class="ma5slider anim-vertical vertical-dots vertical-navs center-dots inside-dots">
+        <div class="slides">
+            <a href="#slide-1"><img src="./images/09.jpg" alt=""></a>
+            <a href="#slide-2"><img src="./images/01.jpg" alt=""></a>
+            <a href="#slide-3"><img src="./images/03.jpg" alt=""></a>
+        </div>
+    </div>
+
+
+    <br id="outside-dots">
+    <h4><span class="parameter">outside-dots</span> Dots outside</h4>
+    <p>#1 - horizontal dots outside</p>
+<pre class="prettyprint lang-html nomargin">
+&lt;div id="example-21" class="ma5slider anim-horizontal horizontal-dots horizontal-navs center-dots outside-dots"&gt;
+</pre>
+    <div id="example-21" class="ma5slider anim-horizontal horizontal-dots horizontal-navs center-dots outside-dots">
+        <div class="slides">
+            <a href="#slide-1"><img src="./images/01.jpg" alt=""></a>
+            <a href="#slide-2"><img src="./images/03.jpg" alt=""></a>
+            <a href="#slide-3"><img src="./images/04.jpg" alt=""></a>
+        </div>
+    </div>
+
+    <p>#2 - vertical dots outside</p>
+<pre class="prettyprint lang-html nomargin rspace">
+&lt;div id="example-22" class="ma5slider anim-horizontal horizontal-dots horizontal-navs center-dots outside-dots"&gt;
+</pre>
+    <div id="example-22" class="ma5slider anim-vertical vertical-dots vertical-navs center-dots outside-dots">
+        <div class="slides">
+            <a href="#slide-1"><img src="./images/03.jpg" alt=""></a>
+            <a href="#slide-2"><img src="./images/04.jpg" alt=""></a>
+            <a href="#slide-3"><img src="./images/02.jpg" alt=""></a>
+        </div>
+    </div>
+
+
+    <hr>
+
+    <h3>7. Navs hover module</h3>
+
+
+    <br id="hover-navs">
+    <h4><span class="parameter">hover-navs </span> Show arrows at hover</h4>
+
+    <pre class="prettyprint lang-html nomargin">
+&lt;div id="example-23" class="ma5slider anim-horizontal horizontal-dots horizontal-navs inside-navs center-dots inside-dots hover-navs"&gt;
+</pre>
+    <div id="example-23" class="ma5slider anim-horizontal horizontal-dots horizontal-navs inside-navs center-dots inside-dots hover-navs">
+        <div class="slides">
+            <a href="#slide-1"><img src="./images/04.jpg" alt=""></a>
+            <a href="#slide-2"><img src="./images/02.jpg" alt=""></a>
+            <a href="#slide-3"><img src="./images/05.jpg" alt=""></a>
+        </div>
+    </div>
+
+
+<hr>
+
+
+    <h3>8. Dots hover module</h3>
+
+
+    <br id="hover-dots">
+    <h4><span class="parameter">hover dots</span> Show dots at hover</h4>
+
+    <pre class="prettyprint lang-html nomargin">
+&lt;div id="example-24" class="ma5slider anim-horizontal horizontal-dots horizontal-navs inside-navs center-dots inside-dots hover-dots"&gt;
+</pre>
+    <div id="example-24" class="ma5slider anim-horizontal horizontal-dots horizontal-navs inside-navs center-dots inside-dots hover-dots">
+        <div class="slides">
+            <a href="#slide-1"><img src="./images/02.jpg" alt=""></a>
+            <a href="#slide-2"><img src="./images/05.jpg" alt=""></a>
+            <a href="#slide-3"><img src="./images/06.jpg" alt=""></a>
+        </div>
+    </div>
+
+
+    <hr>
+
+
+    <h3>9. Loop module</h3>
+
+    <br id="loop-mode">
+    <h4><span class="parameter">loop-mode</span> Enable loop for slides</h4>
+    <p>#1 - loop anim-horizontal</p>
+    <pre class="prettyprint lang-html nomargin">
+&lt;div id="example-26" class="ma5slider anim-horizontal outside-dots center-dots inside-navs loop-mode"&gt;
+</pre>
+    <div id="example-26" class="ma5slider anim-horizontal outside-dots center-dots inside-navs loop-mode">
+        <div class="slides">
+            <a href="#slide-1"><img src="./images/05.jpg" alt=""></a>
+            <a href="#slide-2"><img src="./images/06.jpg" alt=""></a>
+            <a href="#slide-3"><img src="./images/07.jpg" alt=""></a>
+        </div>
+    </div>
+    <p>#2 - loop anim-vertical</p>
+    <pre class="prettyprint lang-html rspace">
+&lt;div id="example-27" class="ma5slider anim-vertical outside-dots vertical-dots inside-navs vertical-navs loop-mode"&gt;
+</pre>
+    <div id="example-27" class="ma5slider anim-vertical outside-dots vertical-dots outside-navs vertical-navs loop-mode">
+        <div class="slides">
+            <a href="#slide-1"><img src="./images/06.jpg" alt=""></a>
+            <a href="#slide-2"><img src="./images/07.jpg" alt=""></a>
+            <a href="#slide-3"><img src="./images/08.jpg" alt=""></a>
+        </div>
+    </div>
+
+    <hr>
+
+    <h3>10. Hidden dots module</h3>
+
+    <br id="hidden-dots">
+    <h4><span class="parameter">hidden-dots</span> Hide dots</h4>
+<pre class="prettyprint lang-html nomargin">
+&lt;div id="example-28" class="ma5slider anim-horizontal inside-dots center-dots inside-navs hidden-dots"&gt;
+</pre>
+    <div id="example-28" class="ma5slider anim-horizontal inside-dots center-dots inside-navs hidden-dots">
+        <div class="slides">
+            <a href="#slide-1"><img src="./images/07.jpg" alt=""></a>
+            <a href="#slide-2"><img src="./images/08.jpg" alt=""></a>
+            <a href="#slide-3"><img src="./images/10.jpg" alt=""></a>
+        </div>
+    </div>
+
+
+    <hr>
+
+    <h3>11. Hidden navs module</h3>
+
+    <br id="hidden-navs">
+    <h4><span class="parameter">hidden-navs</span> Hide navs</h4>
+<pre class="prettyprint lang-html nomargin">
+&lt;div id="example-29" class="ma5slider anim-horizontal inside-dots center-dots inside-navs hidden-navs"&gt;
+</pre>
+    <div id="example-29" class="ma5slider anim-horizontal inside-dots center-dots inside-navs hidden-navs">
+        <div class="slides">
+            <a href="#slide-1"><img src="./images/08.jpg" alt=""></a>
+            <a href="#slide-2"><img src="./images/10.jpg" alt=""></a>
+            <a href="#slide-3"><img src="./images/09.jpg" alt=""></a>
+        </div>
+    </div>
+
+
+    <hr>
+
+    <h2>Overwrite</h2>
+    <p>Global settings can be overwrite by attributess added to specific slide.</p>
+<br>
+    <h3>1. Overwrite dots colors</h3>
+    <br id="data-ma5-dot">
+    <h4 class="vspace">Attribute <span class="parameter">data-ma5-dot</span>, <span class="parameter">data-ma5-dot-active</span> overwrites dots colors for specific slide</h4>
+    <pre class="prettyprint lang-html linenums nomargin vspace">
+&lt;div id="example-30" class="ma5slider outside-navs inside-dots loop-mode"&gt;
+    &lt;div class="slides"&gt;
+        &lt;a href="#slide-1"&gt;&lt;img src="./images/./images/01.jpg" alt=""&gt;&lt;/a&gt;
+        &lt;a href="#slide-2" data-ma5-dot="#888" data-ma5-dot-active="#649100"&gt;&lt;img src="./images/06.jpg" alt=""&gt;&lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+    <div id="example-30" class="ma5slider outside-navs inside-dots loop-mode">
+        <div class="slides">
+            <a href="#slide-1"><img src="./images/01.jpg" alt=""></a>
+            <a href="#slide-2" data-ma5-dot="#000" data-ma5-dot-active="#448100"><img src="./images/06.jpg" alt=""></a>
+        </div>
+    </div>
+
+    <br>
+    <h3>2. Overwrite navs colors</h3>
+    <br id="data-ma5-nav">
+    <h4>Attribute <span class="parameter">data-ma5-nav</span> overwrites navs colors for specific slide</h4>
+    <pre class="prettyprint lang-html linenums nomargin">
+&lt;div id="example-31" class="ma5slider inside-navs outside-dots loop-mode"&gt;
+    &lt;div class="slides"&gt;
+        &lt;a href="#slide-1"&gt;&lt;img src="./images/01.jpg" alt=""&gt;&lt;/a&gt;
+        &lt;a href="#slide-2" data-ma5-nav="#000"&gt;&lt;img src="./images/06.jpg" alt=""&gt;&lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+    <div id="example-31" class="ma5slider inside-navs outside-dots loop-mode">
+        <div class="slides">
+            <a href="#slide-1"><img src="./images/02.jpg" alt=""></a>
+            <a href="#slide-2" data-ma5-nav="#000"><img src="./images/06.jpg" alt=""></a>
+        </div>
+    </div>
+
+
+    <br>
+    <br id="data-ma5-anim">
+    <h3>3. Overwrite animation</h3>
+
+    <h4 class="vspace">Attribute <span class="parameter">data-ma5-anim</span> overwrites animation for specific slide</h4>
+    <p class="vspace">Note: During mouse drag animation is always horizontal.</p>
+    <pre class="prettyprint lang-html linenums nomargin vspace">
+&lt;div id="example-32" class="ma5slider outside-navs outside-dots loop-mode"&gt;
+    &lt;div class="slides"&gt;
+        &lt;a href="#slide-1"&gt;&lt;img src="./images/09.jpg" alt=""&gt;&lt;/a&gt;
+        &lt;a href="#slide-2" data-ma5-anim="anim-vertical"&gt;&lt;img src="./images/01.jpg" alt=""&gt;&lt;/a&gt;
+        &lt;a href="#slide-3" data-ma5-anim="anim-fade"&gt;&lt;img src="./images/03.jpg" alt=""&gt;&lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+    <div id="example-32" class="ma5slider outside-navs outside-dots loop-mode">
+        <div class="slides">
+            <a href="#slide-1"><img src="./images/09.jpg" alt=""></a>
+            <a href="#slide-2" data-ma5-anim="anim-vertical"><img src="./images/01.jpg" alt=""></a>
+            <a href="#slide-3" data-ma5-anim="anim-fade"><img src="./images/03.jpg" alt=""></a>
+        </div>
+    </div>
+
+    <hr>
+    <br id="ma5slider__control">
+    <h2>HTML control</h2>
+
+    <h4 class="vspace">Selectors with class <span class="parameter">ma5slider__control</span> for external control slider</h4>
+<pre class="prettyprint lang-html vspace">
+&lt;a class="ma5slider__control" href="#" data-ma5slider="#example-33" data-ma5slide="4"&gt;Go to slide 4&lt;/a&gt;
+&lt;a class="ma5slider__control" href="#" data-ma5slider="#example-33" data-ma5slide="first"&gt;First slide&lt;/a&gt;
+&lt;a class="ma5slider__control" href="#" data-ma5slider="#example-33" data-ma5slide="previous"&gt;Previous slide&lt;/a&gt;
+&lt;a class="ma5slider__control" href="#" data-ma5slider="#example-33" data-ma5slide="next"&gt;Next slide&lt;/a&gt;
+&lt;a class="ma5slider__control" href="#" data-ma5slider="#example-33" data-ma5slide="last"&gt;Last slide&lt;/a&gt;
+</pre>
+
+    <p class="text-center">
+        <a class="ma5slider__control" href="#slide" data-ma5slider="#example-33" data-ma5slide="4">Go to slide 4</a> |
+        <a class="ma5slider__control" href="#first" data-ma5slider="#example-33" data-ma5slide="first">First slide</a> |
+        <a class="ma5slider__control" href="#previous" data-ma5slider="#example-33" data-ma5slide="previous">Previous slide</a> |
+        <a class="ma5slider__control" href="#next" data-ma5slider="#example-33" data-ma5slide="next">Next slide</a> |
+        <a class="ma5slider__control" href="#last" data-ma5slider="#example-33" data-ma5slide="last">Last slide</a>
+    </p>
+    <br>
+    <div id="example-33" class="ma5slider outside-dots outside-navs">
+        <div class="slides">
+            <a href="#slide-1"><img src="./images/09.jpg" alt=""></a>
+            <a href="#slide-2"><img src="./images/01.jpg" alt=""></a>
+            <a href="#slide-3"><img src="./images/03.jpg" alt=""></a>
+            <a href="#slide-4"><img src="./images/04.jpg" alt=""></a>
+            <a href="#slide-5"><img src="./images/02.jpg" alt=""></a>
+            <a href="#slide-6"><img src="./images/05.jpg" alt=""></a>
+            <a href="#slide-7"><img src="./images/06.jpg" alt=""></a>
+            <a href="#slide-8"><img src="./images/07.jpg" alt=""></a>
+            <a href="#slide-9"><img src="./images/08.jpg" alt=""></a>
+            <a href="#slide-10"><img src="./images/10.jpg" alt=""></a>
+        </div>
+    </div>
+
+    <hr>
+
+    <h2 id="script-control-slide-number">Methods and events</h2>
+
+<pre class="prettyprint lang-js nomargin vspace">
+    $('.ma5slider').ma5slider();
+    $('#example-34').ma5slider('goToSlide', 3);
+    $('#example-34').on('ma5.animationStart', function () {
+        console.log('event animationStart');
+    });
+    $('#example-34').on('ma5.animationEnd', function () {
+        console.log('event animationEnd');
+    });
+    $('#example-34').on('ma5.firstSlide', function () {
+        console.log('event firstSlide');
+    });
+    $('#example-34').on('ma5.lastSlide', function () {
+        console.log('event lastSlide');
+    });
+    $('#example-34').on('ma5.activeSlide', function (event, slide) {
+        console.log( 'event activeSlide: ' + slide );
+    });
+</pre>
+
+    <div id="example-34" class="ma5slider outside-dots outside-navs">
+        <div class="slides">
+            <a href="#slide-1"><img src="./images/05.jpg" alt=""></a>
+            <a href="#slide-2"><img src="./images/06.jpg" alt=""></a>
+            <a href="#slide-3"><img src="./images/08.jpg" alt=""></a>
+            <a href="#slide-4"><img src="./images/10.jpg" alt=""></a>
+        </div>
+    </div>
+
+
+
+
+
+    <h2>Autoplay module</h2>
+
+
+    <p>Set tempo by data-tempo attribute. For 1500ms: <b>data-tempo="1500"</b></p>
+
+    <a class="btn btn-primary btn-xs" href="./index-autoplay.html">Example</a>
+
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+</div>
+<footer class="site-footer container">
+<hr>
+    MA5 Slider has MIT License, <a href="https://github.com/ma-5/ma5slider" target="_blank">Github</a> v 1.1.6
+</footer>
+</body>
+</html>
