@@ -3,7 +3,7 @@
   "description": "jQuery UI Image slider.",
   "version": "v1.1.6",
   "main": [
-    "./dist/css/ma5slider.css",
+    "./docs/css/ma5slider.css",
     "./app/js/ma5slider.js"
   ],
   "authors": [
