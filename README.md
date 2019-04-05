@@ -38,12 +38,12 @@ jQuery Image Slider. Ease to use, lightweight, responsive, mouse draggable, cust
         <div class="ma5slider outside-navs outside-dots anim-horizontal loop-mode">
             <div class="slides">
                 <!-- children = slides -->
-                <a href="#slide-1"><img src="https://ma-5.github.io/ma5slider/images/DSC_0916.jpg" alt=""></a>
-                <a href="#slide-2"><img src="https://ma-5.github.io/ma5slider/images/DSC_0922.jpg" alt=""></a>
-                <a href="#slide-3"><img src="https://ma-5.github.io/ma5slider/images/DSC_1002.jpg" alt=""></a>
-                <a href="#slide-4"><img src="https://ma-5.github.io/ma5slider/images/DSC_1103.jpg" alt=""></a>
-                <a href="#slide-5"><img src="https://ma-5.github.io/ma5slider/images/DSC_1376.jpg" alt=""></a>
-                <a href="#slide-6"><img src="https://ma-5.github.io/ma5slider/images/DSC_1390.jpg" alt=""></a>
+                <a href="#slide-1"><img src="https://ma-5.github.io/ma5slider/images/01.jpg" alt=""></a>
+                <a href="#slide-2"><img src="https://ma-5.github.io/ma5slider/images/02.jpg" alt=""></a>
+                <a href="#slide-3"><img src="https://ma-5.github.io/ma5slider/images/03.jpg" alt=""></a>
+                <a href="#slide-4"><img src="https://ma-5.github.io/ma5slider/images/04.jpg" alt=""></a>
+                <a href="#slide-5"><img src="https://ma-5.github.io/ma5slider/images/05.jpg" alt=""></a>
+                <a href="#slide-6"><img src="https://ma-5.github.io/ma5slider/images/06.jpg" alt=""></a>
             </div>
         </div>
     </body>
