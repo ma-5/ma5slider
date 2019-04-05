@@ -1,7 +1,7 @@
 # ma5slider
 jQuery Image Slider. Ease to use, lightweight, responsive, mouse draggable, customizable by CSS classes, custom animations for each slide, JS methods and events. Javascript 16kB
 
-[**Demo**](http://ma5slider.ma5.pl)
+[**Demo**](https://ma-5.github.io/ma5slider)
 
 ##Quick start
 
@@ -11,17 +11,17 @@ jQuery Image Slider. Ease to use, lightweight, responsive, mouse draggable, cust
 ```html
 <head>
     <!-- jQuery -->
-    <script src="http://ma5slider.ma5.pl/js/jquery.min.js"></script>
+    <script src="https://ma-5.github.io/ma5slider/js/jquery.min.js"></script>
      
     <!-- jQuery UI mouse draggable widget -->
-    <script src="http://ma5slider.ma5.pl/js/jquery-ui.min.js"></script>
+    <script src="https://ma-5.github.io/ma5slider/js/jquery-ui.min.js"></script>
      
     <!-- Touch Event Support for jQuery UI -->
-    <script src="http://ma5slider.ma5.pl/js/jquery.ui.touch-punch.min.js"></script>
+    <script src="https://ma-5.github.io/ma5slider/js/jquery.ui.touch-punch.min.js"></script>
      
     <!-- MA5 Slider -->
-    <link href="http://ma5slider.ma5.pl/css/ma5slider.min.css" rel="stylesheet" type="text/css">
-    <script src="http://ma5slider.ma5.pl/js/ma5slider.min.js"></script>
+    <link href="https://ma-5.github.io/ma5slider/css/ma5slider.min.css" rel="stylesheet" type="text/css">
+    <script src="https://ma-5.github.io/ma5slider/js/ma5slider.min.js"></script>
      
     <script>
         $(window).on('load', function () {
@@ -38,12 +38,12 @@ jQuery Image Slider. Ease to use, lightweight, responsive, mouse draggable, cust
         <div class="ma5slider outside-navs outside-dots anim-horizontal loop-mode">
             <div class="slides">
                 <!-- children = slides -->
-                <a href="#slide-1"><img src="http://ma5slider.ma5.pl/images/DSC_0916.jpg" alt=""></a>
-                <a href="#slide-2"><img src="http://ma5slider.ma5.pl/images/DSC_0922.jpg" alt=""></a>
-                <a href="#slide-3"><img src="http://ma5slider.ma5.pl/images/DSC_1002.jpg" alt=""></a>
-                <a href="#slide-4"><img src="http://ma5slider.ma5.pl/images/DSC_1103.jpg" alt=""></a>
-                <a href="#slide-5"><img src="http://ma5slider.ma5.pl/images/DSC_1376.jpg" alt=""></a>
-                <a href="#slide-6"><img src="http://ma5slider.ma5.pl/images/DSC_1390.jpg" alt=""></a>
+                <a href="#slide-1"><img src="https://ma-5.github.io/ma5slider/images/DSC_0916.jpg" alt=""></a>
+                <a href="#slide-2"><img src="https://ma-5.github.io/ma5slider/images/DSC_0922.jpg" alt=""></a>
+                <a href="#slide-3"><img src="https://ma-5.github.io/ma5slider/images/DSC_1002.jpg" alt=""></a>
+                <a href="#slide-4"><img src="https://ma-5.github.io/ma5slider/images/DSC_1103.jpg" alt=""></a>
+                <a href="#slide-5"><img src="https://ma-5.github.io/ma5slider/images/DSC_1376.jpg" alt=""></a>
+                <a href="#slide-6"><img src="https://ma-5.github.io/ma5slider/images/DSC_1390.jpg" alt=""></a>
             </div>
         </div>
     </body>
@@ -68,9 +68,9 @@ You can use a **CSS classes** next to **ma5slider** to the final appearance.
 
 | Class name | Description | Example page |
 -------------|-------------|---------------
-| anim-horizontal <span class="legend">default</span> | Slides animated horizontally. | [Example](http://ma5slider.ma5.pl/index-examples.html#anim-horizontal) |
-| anim-vertical | Slides animated vertically. | [Example](http://ma5slider.ma5.pl/index-examples.html#anim-vertical) |
-| anim-fade | Slides animated by fade effect. | [Example](http://ma5slider.ma5.pl/index-examples.html#anim-fade) |
+| anim-horizontal <span class="legend">default</span> | Slides animated horizontally. | [Example](https://ma-5.github.io/ma5slider/index-examples.html#anim-horizontal) |
+| anim-vertical | Slides animated vertically. | [Example](https://ma-5.github.io/ma5slider/index-examples.html#anim-vertical) |
+| anim-fade | Slides animated by fade effect. | [Example](https://ma-5.github.io/ma5slider/index-examples.html#anim-fade) |
 
 
 **2\. Arrows direction module**
@@ -78,8 +78,8 @@ You can use a **CSS classes** next to **ma5slider** to the final appearance.
 
 | Class name | Description | Example page |
 -------------|-------------|---------------
-| horizontal-navs <span class="legend">default</span> | Arrows left and right.| [Example](http://ma5slider.ma5.pl/index-examples.html#horizontal-navs) |
-| vertical-navs | Arrows top and bottom. | [Example](http://ma5slider.ma5.pl/index-examples.html#vertical-navs) |
+| horizontal-navs <span class="legend">default</span> | Arrows left and right.| [Example](https://ma-5.github.io/ma5slider/index-examples.html#horizontal-navs) |
+| vertical-navs | Arrows top and bottom. | [Example](https://ma-5.github.io/ma5slider/index-examples.html#vertical-navs) |
 
 
 **3\. Nesting arrows module**
@@ -87,8 +87,8 @@ You can use a **CSS classes** next to **ma5slider** to the final appearance.
 
 | Class name | Description | Example page |
 -------------|-------------|---------------
-| inside-navs <span class="legend">default</span> | Arrows inside. | [Example](http://ma5slider.ma5.pl/index-examples.html#inside-navs) |
-| outside-navs | Arrows outside. | [Example](http://ma5slider.ma5.pl/index-examples.html#outside-navs) |
+| inside-navs <span class="legend">default</span> | Arrows inside. | [Example](https://ma-5.github.io/ma5slider/index-examples.html#inside-navs) |
+| outside-navs | Arrows outside. | [Example](https://ma-5.github.io/ma5slider/index-examples.html#outside-navs) |
 
 
 
@@ -98,7 +98,7 @@ You can use a **CSS classes** next to **ma5slider** to the final appearance.
 
 | Class name | Description | Example page |
 -------------|-------------|---------------
-| horizontal-dots <span class="legend">default</span> | Dots placed horizontally. You can add additional align parameters: **center-dots** <span class="legend">default</span>, **left-dots**, **right-dots** | [Example](http://ma5slider.ma5.pl/index-examples.html#horizontal-dots) || vertical-dots | Dots placed vertically. You can add additional align parameters: **middle-dots** <span class="legend">default</span>, **top-dots**, **bottom-dots** | [Example](http://ma5slider.ma5.pl/index-examples.html#vertical-dots) |
+| horizontal-dots <span class="legend">default</span> | Dots placed horizontally. You can add additional align parameters: **center-dots** <span class="legend">default</span>, **left-dots**, **right-dots** | [Example](https://ma-5.github.io/ma5slider/index-examples.html#horizontal-dots) || vertical-dots | Dots placed vertically. You can add additional align parameters: **middle-dots** <span class="legend">default</span>, **top-dots**, **bottom-dots** | [Example](https://ma-5.github.io/ma5slider/index-examples.html#vertical-dots) |
 
 
 
@@ -108,7 +108,7 @@ You can use a **CSS classes** next to **ma5slider** to the final appearance.
 
 | Class name | Description | Example page |
 -------------|-------------|---------------
-| bottom-dots <span class="legend">default</span> | Dots placed after slides. | [Example](http://ma5slider.ma5.pl/index-examples.html#bottom-dots) || top-dots | Dots placed before slides. | [Example](http://ma5slider.ma5.pl/index-examples.html#top-dots) |
+| bottom-dots <span class="legend">default</span> | Dots placed after slides. | [Example](https://ma-5.github.io/ma5slider/index-examples.html#bottom-dots) || top-dots | Dots placed before slides. | [Example](https://ma-5.github.io/ma5slider/index-examples.html#top-dots) |
 
 
 
@@ -118,8 +118,8 @@ You can use a **CSS classes** next to **ma5slider** to the final appearance.
 
 | Class name | Description | Example page |
 -------------|-------------|---------------
-| outside-dots <span class="legend">default</span> | Dots outside. | [Example](http://ma5slider.ma5.pl/index-examples.html#outside-dots) |
-| inside-dots | Dots inside. | [Example](http://ma5slider.ma5.pl/index-examples.html#inside-dots) |
+| outside-dots <span class="legend">default</span> | Dots outside. | [Example](https://ma-5.github.io/ma5slider/index-examples.html#outside-dots) |
+| inside-dots | Dots inside. | [Example](https://ma-5.github.io/ma5slider/index-examples.html#inside-dots) |
 
 
 
@@ -129,7 +129,7 @@ You can use a **CSS classes** next to **ma5slider** to the final appearance.
 
 | Class name | Description | Example page |
 -------------|-------------|---------------
-| hover-navs | Show arrows at hover | [Example](http://ma5slider.ma5.pl/index-examples.html#hover-navs) |
+| hover-navs | Show arrows at hover | [Example](https://ma-5.github.io/ma5slider/index-examples.html#hover-navs) |
 
 
 
@@ -139,7 +139,7 @@ You can use a **CSS classes** next to **ma5slider** to the final appearance.
 
 | Class name | Description | Example page |
 -------------|-------------|---------------
-| hover-dots | Show dots at hover | [Example](http://ma5slider.ma5.pl/index-examples.html#hover-dots) |
+| hover-dots | Show dots at hover | [Example](https://ma-5.github.io/ma5slider/index-examples.html#hover-dots) |
 
 
 
@@ -149,7 +149,7 @@ You can use a **CSS classes** next to **ma5slider** to the final appearance.
 
 | Class name | Description | Example page |
 -------------|-------------|---------------
-| autoplay | Auto play slider. Set tempo by data-tempo attribute. For 1500ms: **data-tempo="1500"** | [Example](http://ma5slider.ma5.pl/index-autoplay.html) |
+| autoplay | Auto play slider. Set tempo by data-tempo attribute. For 1500ms: **data-tempo="1500"** | [Example](https://ma-5.github.io/ma5slider/index-autoplay.html) |
 
 
 
@@ -159,7 +159,7 @@ You can use a **CSS classes** next to **ma5slider** to the final appearance.
 
 | Class name | Description | Example page |
 -------------|-------------|---------------
-| loop-mode | Enable loop for slides | [Example](http://ma5slider.ma5.pl/index-examples.html#loop-mode) |
+| loop-mode | Enable loop for slides | [Example](https://ma-5.github.io/ma5slider/index-examples.html#loop-mode) |
 
 
 
@@ -169,7 +169,7 @@ You can use a **CSS classes** next to **ma5slider** to the final appearance.
 
 | Class name | Description | Example page |
 -------------|-------------|---------------
-| hidden-dots | Hide dots | [Example](http://ma5slider.ma5.pl/index-examples.html#hidden-dots) |
+| hidden-dots | Hide dots | [Example](https://ma-5.github.io/ma5slider/index-examples.html#hidden-dots) |
 
 
 
@@ -179,7 +179,7 @@ You can use a **CSS classes** next to **ma5slider** to the final appearance.
 
 | Class name | Description | Example page |
 -------------|-------------|---------------
-| hidden-navs | Hide navs | [Example](http://ma5slider.ma5.pl/index-examples.html#hidden-navs) |
+| hidden-navs | Hide navs | [Example](https://ma-5.github.io/ma5slider/index-examples.html#hidden-navs) |
 
 
 
@@ -193,7 +193,7 @@ Global settings can be overwrite by attributess added to specific slide.
 
 | Attribute name | Description | Example page |
 -----------------|-------------|---------------
-| data-ma5-dot, data-ma5-dot-active | Overwrite dots colors for specific slide. | [Example](http://ma5slider.ma5.pl/index-examples.html#data-ma5-dot) |
+| data-ma5-dot, data-ma5-dot-active | Overwrite dots colors for specific slide. | [Example](https://ma-5.github.io/ma5slider/index-examples.html#data-ma5-dot) |
 
 
 
@@ -203,7 +203,7 @@ Global settings can be overwrite by attributess added to specific slide.
 
 | Attribute name | Description | Example page |
 -----------------|-------------|---------------
-| data-ma5-nav | Overwrite nav colors for specific slide. | [Example](http://ma5slider.ma5.pl/index-examples.html#data-ma5-nav) |
+| data-ma5-nav | Overwrite nav colors for specific slide. | [Example](https://ma-5.github.io/ma5slider/index-examples.html#data-ma5-nav) |
 
 
 
@@ -214,7 +214,7 @@ Note: During mouse drag animation is always horizontal.
 
 | Attribute name | Description | Example page |
 -----------------|-------------|---------------
-| data-ma5-anim | Overwrite animation for specific slide. | [Example](http://ma5slider.ma5.pl/index-examples.html#data-ma5-anim) |
+| data-ma5-anim | Overwrite animation for specific slide. | [Example](https://ma-5.github.io/ma5slider/index-examples.html#data-ma5-anim) |
 
 
 ## HTML control
@@ -229,7 +229,7 @@ External control elements for the slider.
 <a class="ma5slider__control" href="#slide.." data-ma5slider="#example-33" data-ma5slide="last">Last slide</a>
 ```
 
-[Example](http://ma5slider.ma5.pl/index-examples.html#ma5slider__control)
+[Example](https://ma-5.github.io/ma5slider/index-examples.html#ma5slider__control)
 
 ## Methods
 
@@ -297,7 +297,7 @@ $('.ma5slider').on('ma5.activeSlide', function (event, slide) {
 ```
 
 
-[Example](http://ma5slider.ma5.pl/index-examples.html#script-control-slide-number)
+[Example](https://ma-5.github.io/ma5slider/index-examples.html#script-control-slide-number)
 
 ## Mouse Draggable Extension
 
